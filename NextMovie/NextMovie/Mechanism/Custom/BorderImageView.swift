@@ -6,4 +6,13 @@
 //  Copyright © 2018 Valmir Junior. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+@IBDesignable class BorderImageView: UIImageView {
+    
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            self.layer.cornerRadius = self.cornerRadius
+        }
+    }
+}

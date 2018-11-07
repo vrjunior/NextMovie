@@ -37,7 +37,7 @@
         <!--Filmes-->
         <scene sceneID="pvc-Bx-8bH">
             <objects>
-                <viewController title="Filmes" id="AE9-35-ePY" sceneMemberID="viewController">
+                <viewController title="Filmes" id="AE9-35-ePY" customClass="MoviesListViewController" customModule="NextMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7mI-B2-KoK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,12 +53,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="172.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-lU-keo">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-lU-keo" customClass="BorderImageView" customModule="NextMovie" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="10" width="112" height="149"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="149" id="XzH-fw-2EL"/>
                                                         <constraint firstAttribute="width" constant="112" id="sMk-UF-F1z"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-FX-pLi">
                                                     <rect key="frame" x="138" y="12" width="225" height="24"/>
@@ -147,14 +152,35 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jq2-yf-fQk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Filmes" id="woK-hr-o29"/>
+                    <navigationItem key="navigationItem" title="Filmes" id="woK-hr-o29">
+                        <barButtonItem key="rightBarButtonItem" image="AddMovieBarButtonIcon" id="DI5-Ay-os6">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addMovieBarButtonPressed:" destination="AE9-35-ePY" id="wER-7a-hv8"/>
+                                <segue destination="sT9-Hh-Mkx" kind="show" identifier="addMovie" id="i5f-0w-pTR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addMovieBarButton" destination="DI5-Ay-os6" id="Zza-0y-vYE"/>
+                        <outlet property="tableView" destination="Wdg-DS-I8b" id="EYk-fI-Dfv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJb-sh-vG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="20.239880059970016"/>
         </scene>
+        <!--AddMovieViewController-->
+        <scene sceneID="5Wm-3Z-uk3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddMovieViewController" id="sT9-Hh-Mkx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d83-Er-5uB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="20"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="AddMovieBarButtonIcon" width="25" height="25"/>
         <image name="StarIcon" width="24" height="23"/>
         <image name="TimeIcon" width="24" height="24"/>
     </resources>
