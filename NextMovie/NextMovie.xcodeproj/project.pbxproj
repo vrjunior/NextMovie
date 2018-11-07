@@ -18,6 +18,8 @@
 		D26424B521925A8B0071DE6F /* MoviesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */; };
 		D26424B721925FE00071DE6F /* AddMovieViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B621925FE00071DE6F /* AddMovieViewController.storyboard */; };
 		D28F921121932507009A8B10 /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F921021932507009A8B10 /* BorderImageView.swift */; };
+		D2B60C3621937D96007FB892 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3521937D96007FB892 /* Movie.swift */; };
+		D2B60C3821937E4B007FB892 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoviesListViewController.storyboard; sourceTree = "<group>"; };
 		D26424B621925FE00071DE6F /* AddMovieViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMovieViewController.storyboard; sourceTree = "<group>"; };
 		D28F921021932507009A8B10 /* BorderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
+		D2B60C3521937D96007FB892 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		D264249A219259BF0071DE6F /* NextMovie */ = {
 			isa = PBXGroup;
 			children = (
+				D2B60C3421937D82007FB892 /* Model */,
 				D23CCC852193206100AF8CD4 /* Mechanism */,
 				D26424AE219259EC0071DE6F /* Presentation */,
 				D26424AD219259D20071DE6F /* Controller */,
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D264249D219259BF0071DE6F /* MoviesListViewController.swift */,
+				D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -128,6 +134,14 @@
 				D28F921021932507009A8B10 /* BorderImageView.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		D2B60C3421937D82007FB892 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2B60C3521937D96007FB892 /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B60C3621937D96007FB892 /* Movie.swift in Sources */,
 				D28F921121932507009A8B10 /* BorderImageView.swift in Sources */,
 				D264249E219259BF0071DE6F /* MoviesListViewController.swift in Sources */,
 				D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */,
 				D23CCC882193216800AF8CD4 /* CustomTextView.swift in Sources */,
+				D2B60C3821937E4B007FB892 /* AddMovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

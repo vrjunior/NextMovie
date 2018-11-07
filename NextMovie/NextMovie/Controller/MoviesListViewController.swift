@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MovieDelegate: class {
+    func add(_ movie: Movie)
+}
+
 class MoviesListViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -31,6 +35,12 @@ class MoviesListViewController: UIViewController {
     @IBAction func addMovieBarButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: self.addMovieSegue, sender: nil)
     }
-    
 }
 
+// MARK: - MovieDelegate
+extension MoviesListViewController: MovieDelegate {
+    
+    func add(_ movie: Movie) {
+        
+    }
+}

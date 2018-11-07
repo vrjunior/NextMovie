@@ -13,7 +13,7 @@
         <!--Adicionar filme-->
         <scene sceneID="bzz-6e-AXz">
             <objects>
-                <viewController id="xty-g5-Do3" sceneMemberID="viewController">
+                <viewController id="xty-g5-Do3" customClass="AddMovieViewController" customModule="NextMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="moK-rl-p9d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,12 +42,18 @@
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZQ-56-rqq">
                                                         <rect key="frame" x="34.5" y="0.0" width="112" height="149"/>
+                                                        <connections>
+                                                            <action selector="addCoverButtonPressed:" destination="xty-g5-Do3" eventType="touchUpInside" id="pfu-ud-5ui"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-bV-Bgp">
                                                         <rect key="frame" x="0.0" y="157" width="181" height="30"/>
                                                         <state key="normal" title="Adicionar imagem de capa">
                                                             <color key="titleColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="addCoverButtonPressed:" destination="xty-g5-Do3" eventType="touchUpInside" id="ZIn-1T-Gz9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,7 +81,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duração" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feP-hO-dUe">
                                                         <rect key="frame" x="0.0" y="46" width="343" height="36"/>
@@ -84,7 +90,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Categorias" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM6-bE-8w4">
                                                         <rect key="frame" x="0.0" y="92" width="343" height="36"/>
@@ -102,7 +108,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                     </textField>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DRW-Nu-zIv" customClass="CustomTextView" customModule="NextMovie" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="184" width="343" height="128"/>
@@ -111,7 +117,7 @@
                                                             <constraint firstAttribute="height" constant="128" id="Kye-Zm-g3X"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Sinopse"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -130,10 +136,31 @@
                                                     </textView>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37u-oL-5z2">
+                                                <rect key="frame" x="16" y="551" width="343" height="38"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="05b-Iy-qoI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <state key="normal" title="Adicionar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addButtonPressed:" destination="xty-g5-Do3" eventType="touchUpInside" id="RV5-OE-rvu"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="8R6-qg-haV" firstAttribute="centerX" secondItem="HQ5-hC-jrM" secondAttribute="centerX" id="3iU-8l-8NB"/>
+                                            <constraint firstItem="37u-oL-5z2" firstAttribute="leading" secondItem="7en-aG-bg3" secondAttribute="leading" id="4as-qh-8L2"/>
+                                            <constraint firstItem="37u-oL-5z2" firstAttribute="top" secondItem="7en-aG-bg3" secondAttribute="bottom" constant="16" id="6hU-RA-Jyt"/>
+                                            <constraint firstItem="37u-oL-5z2" firstAttribute="trailing" secondItem="7en-aG-bg3" secondAttribute="trailing" id="AVi-om-Nyo"/>
                                             <constraint firstAttribute="trailing" secondItem="7en-aG-bg3" secondAttribute="trailing" constant="16" id="OS8-pp-dNV"/>
                                             <constraint firstItem="8R6-qg-haV" firstAttribute="top" secondItem="HQ5-hC-jrM" secondAttribute="top" constant="16" id="lQv-HP-oaO"/>
                                             <constraint firstItem="7en-aG-bg3" firstAttribute="leading" secondItem="HQ5-hC-jrM" secondAttribute="leading" constant="16" id="oTU-V8-ymS"/>
@@ -161,6 +188,15 @@
                         <viewLayoutGuide key="safeArea" id="uwB-bE-syb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Adicionar filme" id="ItW-X6-tpI"/>
+                    <connections>
+                        <outlet property="addButton" destination="37u-oL-5z2" id="LAx-i7-2cS"/>
+                        <outlet property="categoriesTextField" destination="bM6-bE-8w4" id="M7A-G6-ZZH"/>
+                        <outlet property="coverImageView" destination="D3p-Cd-zzR" id="uq9-8v-OcR"/>
+                        <outlet property="durationTextField" destination="feP-hO-dUe" id="SkN-TO-Jyc"/>
+                        <outlet property="ratingTextField" destination="Oz4-JF-zcM" id="AIL-rZ-zL3"/>
+                        <outlet property="sinopseTextView" destination="DRW-Nu-zIv" id="GCw-ns-Fxw"/>
+                        <outlet property="titleTextField" destination="HZp-Y2-WC2" id="ygv-Cy-aUE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zd-PF-8ZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
