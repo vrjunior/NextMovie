@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HkQ-KO-1PW">
+            <objects>
+                <tabBarController id="kpA-WE-mmz" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0iE-nP-qZO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hz5-bo-xvw" kind="relationship" relationship="viewControllers" id="Dko-jC-MCa"/>
+                        <segue destination="oXe-n2-nav" kind="relationship" relationship="viewControllers" id="9Rv-EQ-KGV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0I-ro-Oog" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="-41"/>
+        </scene>
+        <!--MoviesListViewController-->
+        <scene sceneID="ukM-mB-BSr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MoviesListViewController" id="Hz5-bo-xvw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wYI-rD-R01"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSZ-oK-vPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="-224"/>
+        </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="p43-wF-1hM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingsViewController" id="oXe-n2-nav" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RrR-Cy-ANc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUi-yI-cqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="65"/>
+        </scene>
+    </scenes>
+</document>
