@@ -10,7 +10,7 @@ import Foundation
 import UIKit.UIImage
 
 struct Movie {
-    var image: UIImage
+    var image: UIImage?
     var title: String
     var duration: String
     var sinopse: String

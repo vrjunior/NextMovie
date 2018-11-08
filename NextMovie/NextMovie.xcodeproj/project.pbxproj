@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D23CCC882193216800AF8CD4 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CCC872193216800AF8CD4 /* CustomTextView.swift */; };
 		D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2B921947315008C453A /* MovieTableViewCell.swift */; };
+		D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2BB219479E7008C453A /* UIView+Shake.swift */; };
 		D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264249B219259BF0071DE6F /* AppDelegate.swift */; };
 		D264249E219259BF0071DE6F /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264249D219259BF0071DE6F /* MoviesListViewController.swift */; };
 		D26424A1219259BF0071DE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D264249F219259BF0071DE6F /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		D23CCC872193216800AF8CD4 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		D251D2B921947315008C453A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		D251D2BB219479E7008C453A /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		D2642498219259BF0071DE6F /* NextMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264249B219259BF0071DE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D264249D219259BF0071DE6F /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		D23CCC862193207E00AF8CD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D251D2BB219479E7008C453A /* UIView+Shake.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */,
 				D264249E219259BF0071DE6F /* MoviesListViewController.swift in Sources */,
 				D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */,
+				D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */,
 				D23CCC882193216800AF8CD4 /* CustomTextView.swift in Sources */,
 				D2B60C3821937E4B007FB892 /* AddMovieViewController.swift in Sources */,
 			);

@@ -28,6 +28,12 @@ class MoviesListViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addMovieViewController = segue.destination as? AddMovieViewController {
+            addMovieViewController.movieDelegate = self
+        }
+    }
+    
     
     // MARK: - Methods
     
