@@ -17,6 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Hz5-bo-xvw" kind="relationship" relationship="viewControllers" id="Dko-jC-MCa"/>
@@ -31,7 +33,7 @@
         <scene sceneID="ukM-mB-BSr">
             <objects>
                 <viewControllerPlaceholder storyboardName="MoviesListViewController" id="Hz5-bo-xvw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wYI-rD-R01"/>
+                    <tabBarItem key="tabBarItem" title="Filmes" image="MovieIcon" id="wYI-rD-R01"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSZ-oK-vPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,11 +43,15 @@
         <scene sceneID="p43-wF-1hM">
             <objects>
                 <viewControllerPlaceholder storyboardName="SettingsViewController" id="oXe-n2-nav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RrR-Cy-ANc"/>
+                    <tabBarItem key="tabBarItem" title="Configuração" image="SettingsIcon" id="RrR-Cy-ANc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUi-yI-cqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055" y="65"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MovieIcon" width="25" height="25"/>
+        <image name="SettingsIcon" width="25" height="25"/>
+    </resources>
 </document>

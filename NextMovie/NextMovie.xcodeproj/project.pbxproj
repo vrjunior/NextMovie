@@ -19,6 +19,8 @@
 		D26424B321925A6E0071DE6F /* MovieDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B221925A6E0071DE6F /* MovieDetailsViewController.storyboard */; };
 		D26424B521925A8B0071DE6F /* MoviesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */; };
 		D26424B721925FE00071DE6F /* AddMovieViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B621925FE00071DE6F /* AddMovieViewController.storyboard */; };
+		D27856422194E6AF00D36A54 /* KeyboardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27856412194E6AF00D36A54 /* KeyboardScrollView.swift */; };
+		D27856442194ED4B00D36A54 /* UIViewController+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27856432194ED4B00D36A54 /* UIViewController+HideKeyboard.swift */; };
 		D28F921121932507009A8B10 /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F921021932507009A8B10 /* BorderImageView.swift */; };
 		D2B60C3621937D96007FB892 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3521937D96007FB892 /* Movie.swift */; };
 		D2B60C3821937E4B007FB892 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */; };
@@ -39,6 +41,8 @@
 		D26424B221925A6E0071DE6F /* MovieDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetailsViewController.storyboard; sourceTree = "<group>"; };
 		D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoviesListViewController.storyboard; sourceTree = "<group>"; };
 		D26424B621925FE00071DE6F /* AddMovieViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMovieViewController.storyboard; sourceTree = "<group>"; };
+		D27856412194E6AF00D36A54 /* KeyboardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardScrollView.swift; sourceTree = "<group>"; };
+		D27856432194ED4B00D36A54 /* UIViewController+HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboard.swift"; sourceTree = "<group>"; };
 		D28F921021932507009A8B10 /* BorderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
 		D2B60C3521937D96007FB892 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				D251D2BB219479E7008C453A /* UIView+Shake.swift */,
+				D27856432194ED4B00D36A54 /* UIViewController+HideKeyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			children = (
 				D23CCC872193216800AF8CD4 /* CustomTextView.swift */,
 				D28F921021932507009A8B10 /* BorderImageView.swift */,
+				D27856412194E6AF00D36A54 /* KeyboardScrollView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -238,9 +244,11 @@
 				D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */,
 				D264249E219259BF0071DE6F /* MoviesListViewController.swift in Sources */,
 				D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */,
+				D27856422194E6AF00D36A54 /* KeyboardScrollView.swift in Sources */,
 				D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */,
 				D23CCC882193216800AF8CD4 /* CustomTextView.swift in Sources */,
 				D2B60C3821937E4B007FB892 /* AddMovieViewController.swift in Sources */,
+				D27856442194ED4B00D36A54 /* UIViewController+HideKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
 				INFOPLIST_FILE = NextMovie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
 				INFOPLIST_FILE = NextMovie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

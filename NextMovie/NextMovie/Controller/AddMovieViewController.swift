@@ -39,6 +39,7 @@ class AddMovieViewController: UIViewController {
         self.ratingTextField.delegate = self
         
         self.imagePicker.delegate = self
+        self.hideKeyboardWhenTappedAround()
     }
     
     // MARK: - Methods
@@ -144,3 +145,4 @@ extension AddMovieViewController: UITextFieldDelegate {
         return true
     }
 }
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6fq-h1-2Pp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="abY-UH-ni6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Configuração-->
+        <scene sceneID="Kan-5b-Il0">
+            <objects>
+                <navigationController id="abY-UH-ni6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Configuração" image="SettingsIcon" id="CQD-X7-c6F"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wyv-TI-SiT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6fq-h1-2Pp" kind="relationship" relationship="rootViewController" id="42m-uo-Wyi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5d6-MI-ZBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-758" y="119"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="d0C-iR-iOI">
             <objects>
@@ -20,10 +38,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VFS-gx-B4p"/>
                     </view>
+                    <navigationItem key="navigationItem" id="La4-2U-c2j"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnV-Sb-DKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="100"/>
+            <point key="canvasLocation" x="108" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SettingsIcon" width="25" height="25"/>
+    </resources>
 </document>
