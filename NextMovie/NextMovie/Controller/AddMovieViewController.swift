@@ -23,6 +23,7 @@ class AddMovieViewController: UIViewController {
     
     // MARK: - Properties
     public weak var movieDelegate: MovieDelegate?
+    private var coverImage: UIImage?
     
     
     // MARK: - Super Methods

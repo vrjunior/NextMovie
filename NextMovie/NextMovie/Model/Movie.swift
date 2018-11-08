@@ -11,7 +11,7 @@ import UIKit.UIImage
 
 struct Movie {
     var image: UIImage
-    var name: String
+    var title: String
     var duration: String
     var sinopse: String
     var rating: Double

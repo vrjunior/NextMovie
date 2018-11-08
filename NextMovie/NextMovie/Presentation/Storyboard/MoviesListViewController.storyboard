@@ -46,7 +46,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="173" id="6OU-Y7-nya">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="173" id="6OU-Y7-nya" customClass="MovieTableViewCell" customModule="NextMovie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6OU-Y7-nya" id="YaS-gj-mxj">
@@ -139,6 +139,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="h0d-lU-keo" secondAttribute="bottom" constant="10" id="rkA-RL-ai1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coverImageView" destination="h0d-lU-keo" id="i8Y-jT-dTk"/>
+                                            <outlet property="durationLabel" destination="Rfq-UD-9qt" id="oWz-LT-vDE"/>
+                                            <outlet property="ratingLabel" destination="tco-hK-HmG" id="MzD-gU-Ha9"/>
+                                            <outlet property="titleLabel" destination="E3H-FX-pLi" id="9LJ-Wv-Ruq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

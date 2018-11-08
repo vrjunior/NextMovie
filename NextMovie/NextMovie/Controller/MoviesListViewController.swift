@@ -20,7 +20,8 @@ class MoviesListViewController: UIViewController {
     
     
     // MARK: - Properties
-    let addMovieSegue = "addMovie"
+    private var movies: [Movie] = []
+    private let addMovieSegue = "addMovie"
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -41,6 +42,28 @@ class MoviesListViewController: UIViewController {
 extension MoviesListViewController: MovieDelegate {
     
     func add(_ movie: Movie) {
+        self.movies.append(movie)
+        self.tableView.reloadData()
+    }
+}
+
+// MARK: - TableViewDataSource
+extension MoviesListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        guard let movieCell = cell as? MovieTableViewCell else {
+            return cell
+        }
+        
+        let currentMovie = self.movies[indexPath.row]
+        movieCell.prepare(with: currentMovie)
+        
+        return movieCell
     }
 }
