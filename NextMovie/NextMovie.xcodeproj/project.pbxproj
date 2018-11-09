@@ -22,6 +22,9 @@
 		D27856422194E6AF00D36A54 /* KeyboardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27856412194E6AF00D36A54 /* KeyboardScrollView.swift */; };
 		D27856442194ED4B00D36A54 /* UIViewController+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27856432194ED4B00D36A54 /* UIViewController+HideKeyboard.swift */; };
 		D28F921121932507009A8B10 /* BorderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F921021932507009A8B10 /* BorderImageView.swift */; };
+		D298DBBC2195C93900A28C94 /* Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298DBBB2195C93900A28C94 /* Xib.swift */; };
+		D298DBBF2195C9CB00A28C94 /* MoviesNotFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298DBBE2195C9CB00A28C94 /* MoviesNotFoundView.swift */; };
+		D298DBC12195C9DD00A28C94 /* MoviesNotFoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D298DBC02195C9DD00A28C94 /* MoviesNotFoundView.xib */; };
 		D2B60C3621937D96007FB892 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3521937D96007FB892 /* Movie.swift */; };
 		D2B60C3821937E4B007FB892 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,9 @@
 		D27856412194E6AF00D36A54 /* KeyboardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardScrollView.swift; sourceTree = "<group>"; };
 		D27856432194ED4B00D36A54 /* UIViewController+HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboard.swift"; sourceTree = "<group>"; };
 		D28F921021932507009A8B10 /* BorderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderImageView.swift; sourceTree = "<group>"; };
+		D298DBBB2195C93900A28C94 /* Xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xib.swift; sourceTree = "<group>"; };
+		D298DBBE2195C9CB00A28C94 /* MoviesNotFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNotFoundView.swift; sourceTree = "<group>"; };
+		D298DBC02195C9DD00A28C94 /* MoviesNotFoundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesNotFoundView.xib; sourceTree = "<group>"; };
 		D2B60C3521937D96007FB892 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +133,7 @@
 		D26424AE219259EC0071DE6F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D298DBBD2195C94000A28C94 /* Xib */,
 				D251D2B8219472FC008C453A /* Cell */,
 				D26424AF219259F50071DE6F /* Storyboard */,
 			);
@@ -154,6 +161,16 @@
 				D27856412194E6AF00D36A54 /* KeyboardScrollView.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		D298DBBD2195C94000A28C94 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				D298DBBB2195C93900A28C94 /* Xib.swift */,
+				D298DBBE2195C9CB00A28C94 /* MoviesNotFoundView.swift */,
+				D298DBC02195C9DD00A28C94 /* MoviesNotFoundView.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		D2B60C3421937D82007FB892 /* Model */ = {
@@ -224,6 +241,7 @@
 			files = (
 				D26424B121925A430071DE6F /* SettingsViewController.storyboard in Resources */,
 				D26424A6219259C10071DE6F /* LaunchScreen.storyboard in Resources */,
+				D298DBC12195C9DD00A28C94 /* MoviesNotFoundView.xib in Resources */,
 				D26424B521925A8B0071DE6F /* MoviesListViewController.storyboard in Resources */,
 				D26424A3219259C10071DE6F /* Assets.xcassets in Resources */,
 				D26424B721925FE00071DE6F /* AddMovieViewController.storyboard in Resources */,
@@ -239,11 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D298DBBC2195C93900A28C94 /* Xib.swift in Sources */,
 				D2B60C3621937D96007FB892 /* Movie.swift in Sources */,
 				D28F921121932507009A8B10 /* BorderImageView.swift in Sources */,
 				D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */,
 				D264249E219259BF0071DE6F /* MoviesListViewController.swift in Sources */,
 				D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */,
+				D298DBBF2195C9CB00A28C94 /* MoviesNotFoundView.swift in Sources */,
 				D27856422194E6AF00D36A54 /* KeyboardScrollView.swift in Sources */,
 				D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */,
 				D23CCC882193216800AF8CD4 /* CustomTextView.swift in Sources */,

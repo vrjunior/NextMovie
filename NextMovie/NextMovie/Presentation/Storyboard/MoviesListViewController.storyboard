@@ -177,10 +177,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addMovieBarButton" destination="DI5-Ay-os6" id="Zza-0y-vYE"/>
+                        <outlet property="moviesNotFoundView" destination="qY2-TZ-cpU" id="chs-Gy-jL2"/>
                         <outlet property="tableView" destination="Wdg-DS-I8b" id="EYk-fI-Dfv"/>
                     </connections>
                 </viewController>
                 <tabBarItem title="Filmes" image="MovieIcon" id="Jnl-aQ-rHi"/>
+                <view contentMode="scaleToFill" id="qY2-TZ-cpU" customClass="MoviesNotFoundView" customModule="NextMovie" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="372" height="227"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="QCh-MV-3oY"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJb-sh-vG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="20.239880059970016"/>

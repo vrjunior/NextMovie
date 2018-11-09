@@ -17,6 +17,7 @@ class MoviesListViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addMovieBarButton: UIBarButtonItem!
+    @IBOutlet weak var moviesNotFoundView: MoviesNotFoundView!
     
     
     // MARK: - Properties
@@ -58,7 +59,11 @@ extension MoviesListViewController: MovieDelegate {
 extension MoviesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.movies.count
+        
+        let moviesCount = self.movies.count
+        self.tableView.backgroundView = moviesCount <= 0 ? self.moviesNotFoundView : nil
+        
+        return moviesCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,5 +77,19 @@ extension MoviesListViewController: UITableViewDataSource {
         movieCell.prepare(with: currentMovie)
         
         return movieCell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            self.movies.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
