@@ -74,8 +74,6 @@ extension MoviesListViewController: MovieCreateDelegate {
         self.movies.append(movie)
         self.tableView.reloadData()
     }
-    
-    
 }
 
 // MARK: - MovieEditDelegate
@@ -98,16 +96,28 @@ extension MoviesListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        guard let movieCell = cell as? MovieTableViewCell else {
-            return cell
-        }
-        
         let currentMovie = self.movies[indexPath.row]
-        movieCell.prepare(with: currentMovie)
         
-        return movieCell
+        if currentMovie.itemType == .list {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "releaseCell", for: indexPath)
+            
+            guard let releaseCell = cell as? ReleaseTableViewCell else { return cell }
+            guard let items = currentMovie.items else { return cell }
+            
+            releaseCell.prepare(with: items)
+            
+            return releaseCell
+            
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            
+            guard let movieCell = cell as? MovieTableViewCell else { return cell }
+            
+            
+            movieCell.prepare(with: currentMovie)
+            
+            return movieCell
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
