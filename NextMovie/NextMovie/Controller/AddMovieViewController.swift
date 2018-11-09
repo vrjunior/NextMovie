@@ -113,6 +113,7 @@ class AddMovieViewController: UIViewController {
         self.coverImageView.image = movie.image
         self.titleTextField.text = movie.title
         self.durationTextField.text = movie.duration
+        self.sinopseTextView.text = movie.sinopse
         
         if var categories = movie.categories {
             let firstCategory = categories.removeFirst()
