@@ -38,7 +38,10 @@ class MovieTableViewCell: UITableViewCell {
         self.coverImageView.image = movie.image
         self.titleLabel.text = movie.title
         self.durationLabel.text = movie.duration
-        self.ratingLabel.text = String(movie.rating)
+        
+        if let rating = movie.rating {
+            self.ratingLabel.text = String(rating)
+        }
     }
     
 }

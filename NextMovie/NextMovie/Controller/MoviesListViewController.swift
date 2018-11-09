@@ -8,8 +8,12 @@
 
 import UIKit
 
-protocol MovieDelegate: class {
+protocol MovieCreateDelegate: class {
     func add(_ movie: Movie)
+}
+
+protocol MovieEditDelegate: class {
+    func replace(at index: Int, newMovie: Movie)
 }
 
 class MoviesListViewController: UIViewController {
@@ -30,6 +34,10 @@ class MoviesListViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        if let movies = MovieServices.list() {
+            self.movies = movies
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,8 +49,10 @@ class MoviesListViewController: UIViewController {
         
         if let movieDetailsViewController = segue.destination as? MovieDetailsViewController {
             
-            guard let selectedMovie = sender as? Movie else { return }
-            movieDetailsViewController.movie = selectedMovie
+            guard let tuple = sender as? (movie: Movie, index: Int) else { return }
+            movieDetailsViewController.movie = tuple.movie
+            movieDetailsViewController.movieIndex = tuple.index
+            movieDetailsViewController.movieEditDelegate = self
             return
         }
     }
@@ -57,10 +67,20 @@ class MoviesListViewController: UIViewController {
 }
 
 // MARK: - MovieDelegate
-extension MoviesListViewController: MovieDelegate {
+extension MoviesListViewController: MovieCreateDelegate {
     
     func add(_ movie: Movie) {
         self.movies.append(movie)
+        self.tableView.reloadData()
+    }
+    
+    
+}
+
+// MARK: - MovieEditDelegate
+extension MoviesListViewController: MovieEditDelegate {
+    func replace(at index: Int, newMovie: Movie) {
+        self.movies[index] = newMovie
         self.tableView.reloadData()
     }
 }
@@ -100,6 +120,7 @@ extension MoviesListViewController: UITableViewDataSource {
         if editingStyle == .delete {
             self.movies.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            return
         }
     }
 }
@@ -110,6 +131,7 @@ extension MoviesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedMovie = self.movies[indexPath.row]
-        self.performSegue(withIdentifier: self.movieDetailsSegue, sender: selectedMovie)
+        self.performSegue(withIdentifier: self.movieDetailsSegue, sender: (movie: selectedMovie,
+                                                                           index: indexPath.row))
     }
 }

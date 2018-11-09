@@ -27,7 +27,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8R6-qg-haV" userLabel="ImageCoverSection">
                                                 <rect key="frame" x="97" y="16" width="181" height="187"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D3p-Cd-zzR" customClass="BorderImageView" customModule="NextMovie" customModuleProvider="target">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D3p-Cd-zzR" customClass="BorderImageView" customModule="NextMovie" customModuleProvider="target">
                                                         <rect key="frame" x="34.5" y="0.0" width="112" height="149"/>
                                                         <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>

@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+enum MovieEditorType {
+    case edit
+    case create
+}
+
 class AddMovieViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -22,7 +27,13 @@ class AddMovieViewController: UIViewController {
     
     
     // MARK: - Properties
-    public weak var movieDelegate: MovieDelegate?
+    public weak var movieDelegate: MovieCreateDelegate?
+    
+    public weak var movieEditDelegate: MovieEditDelegate?
+    public var editorType: MovieEditorType = .create
+    public var movieToEdit: Movie?
+    public var movieIndex: Int?
+    
     private var coverImage: UIImage?
     private var imagePicker = UIImagePickerController()
     
@@ -40,10 +51,17 @@ class AddMovieViewController: UIViewController {
         
         self.imagePicker.delegate = self
         self.hideKeyboardWhenTappedAround()
+        
+        if self.editorType == .edit {
+            guard let movieToEdit = self.movieToEdit else { return }
+            self.navigationItem.title = "Editar filme"
+            self.addButton.setTitle("Salvar", for: .normal)
+            self.prepare(with: movieToEdit)
+        }
     }
     
     // MARK: - Methods
-    private func tryCreateMovie() {
+    private func tryCreateEditMovie() {
         
         guard let title = self.titleTextField.text, !title.trimmingCharacters(in: .whitespaces).isEmpty else {
             self.titleTextField.shake()
@@ -70,10 +88,40 @@ class AddMovieViewController: UIViewController {
             return
         }
         
-        let newMovie = Movie(image: self.coverImage, title: title, duration: duration, sinopse: sinopse, rating: rating)
+        var newMovie = Movie()
+        newMovie.image = self.coverImage
+        newMovie.title = title
+        newMovie.duration = duration
+        newMovie.categories = categories.split(separator: ",").map { String($0) }
+        newMovie.rating = rating
+        newMovie.sinopse = sinopse
         
-        self.movieDelegate?.add(newMovie)
+        if self.editorType == .create {
+            self.movieDelegate?.add(newMovie)
+        } else if self.editorType == .edit {
+            
+            guard let movieIndex = self.movieIndex else { return }
+            self.movieEditDelegate?.replace(at: movieIndex, newMovie: newMovie)
+        }
+        
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    private func prepare(with movie: Movie) {
+        self.coverImage = movie.image
+        self.coverImageView.image = movie.image
+        self.titleTextField.text = movie.title
+        self.durationTextField.text = movie.duration
+        
+        if var categories = movie.categories {
+            let firstCategory = categories.removeFirst()
+            self.categoriesTextField.text = categories.reduce(firstCategory, { $0 + ", " + $1  })
+        }
+        
+        if let rating = movie.rating {
+            self.ratingTextField.text = String(rating)
+        }
     }
     
     // MARK: - IBActions
@@ -93,7 +141,7 @@ class AddMovieViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        self.tryCreateMovie()
+        self.tryCreateEditMovie()
     }
 }
 
@@ -139,10 +187,11 @@ extension AddMovieViewController: UITextFieldDelegate {
         case self.ratingTextField:
             self.sinopseTextView.becomeFirstResponder()
         default:
-            self.tryCreateMovie()
+            self.tryCreateEditMovie()
         }
         
         return true
     }
 }
+
 
