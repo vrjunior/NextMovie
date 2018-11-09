@@ -60,6 +60,7 @@ class MoviesListViewController: UIViewController {
     // MARK: - Methods
     
     
+    
     // MARK: - IBActions
     @IBAction func addMovieBarButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: self.addMovieSegue, sender: nil)

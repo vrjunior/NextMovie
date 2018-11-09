@@ -68,16 +68,7 @@ import UIKit
             self.resizePlaceholder()
         }
     }
-    
-    /// When the UITextView did change, show or hide the label based on if the UITextView is empty or not
-    ///
-    /// - Parameter textView: The UITextView that got updated
-    public func textViewDidChange(_ textView: UITextView) {
-        if let placeholderLabel = self.placeholderLabel {
-            placeholderLabel.isHidden = self.text.count > 0
-        }
-    }
-    
+        
     /// Resize the placeholder UILabel to make sure it's in the same position as the UITextView text
     private func resizePlaceholder() {
         guard let placeholderLabel = self.placeholderLabel else {
@@ -110,4 +101,9 @@ import UIKit
         self.delegate = self
     }
     
+    override var text: String! {
+        didSet {
+            placeholderLabel?.isHidden = self.text.count > 0
+        }
+    }
 }

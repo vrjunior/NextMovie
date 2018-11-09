@@ -22,7 +22,7 @@ class AddMovieViewController: UIViewController {
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var categoriesTextField: UITextField!
     @IBOutlet weak var ratingTextField: UITextField!
-    @IBOutlet weak var sinopseTextView: UITextView!
+    @IBOutlet weak var sinopseTextView: CustomTextView!
     @IBOutlet weak var addButton: UIButton!
     
     
@@ -36,6 +36,7 @@ class AddMovieViewController: UIViewController {
     
     private var coverImage: UIImage?
     private var imagePicker = UIImagePickerController()
+    private let timePicker = UIDatePicker()
     
     
     // MARK: - Super Methods
@@ -51,6 +52,7 @@ class AddMovieViewController: UIViewController {
         
         self.imagePicker.delegate = self
         self.hideKeyboardWhenTappedAround()
+        self.setupDurationPicker()
         
         if self.editorType == .edit {
             guard let movieToEdit = self.movieToEdit else { return }
@@ -123,6 +125,18 @@ class AddMovieViewController: UIViewController {
         if let rating = movie.rating {
             self.ratingTextField.text = String(rating)
         }
+    }
+    
+    private func setupDurationPicker() {
+        self.timePicker.datePickerMode = .countDownTimer
+        self.durationTextField.inputView = self.timePicker
+        self.timePicker.addTarget(self, action: #selector(durationPickerValueChanged(_ :)), for: UIControl.Event.valueChanged)
+    }
+    
+    @objc func durationPickerValueChanged(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH'h' mm'min'"
+        self.durationTextField.text = formatter.string(from: sender.date)
     }
     
     // MARK: - IBActions
