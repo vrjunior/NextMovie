@@ -179,6 +179,7 @@
                         <outlet property="addMovieBarButton" destination="DI5-Ay-os6" id="Zza-0y-vYE"/>
                         <outlet property="moviesNotFoundView" destination="qY2-TZ-cpU" id="chs-Gy-jL2"/>
                         <outlet property="tableView" destination="Wdg-DS-I8b" id="EYk-fI-Dfv"/>
+                        <segue destination="1Xf-2Y-daV" kind="show" identifier="movieDetails" id="4nv-I8-u1g"/>
                     </connections>
                 </viewController>
                 <tabBarItem title="Filmes" image="MovieIcon" id="Jnl-aQ-rHi"/>
@@ -192,13 +193,21 @@
             </objects>
             <point key="canvasLocation" x="180" y="20.239880059970016"/>
         </scene>
+        <!--MovieDetailsViewController-->
+        <scene sceneID="Vna-Hs-odR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetailsViewController" id="1Xf-2Y-daV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAf-3a-o1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="-78"/>
+        </scene>
         <!--AddMovieViewController-->
         <scene sceneID="5Wm-3Z-uk3">
             <objects>
                 <viewControllerPlaceholder storyboardName="AddMovieViewController" id="sT9-Hh-Mkx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d83-Er-5uB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="20"/>
+            <point key="canvasLocation" x="1002" y="115"/>
         </scene>
     </scenes>
     <resources>

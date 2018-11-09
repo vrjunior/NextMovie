@@ -23,19 +23,29 @@ class MoviesListViewController: UIViewController {
     // MARK: - Properties
     private var movies: [Movie] = []
     private let addMovieSegue = "addMovie"
+    private let movieDetailsSegue = "movieDetails"
     
     // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if let addMovieViewController = segue.destination as? AddMovieViewController {
             addMovieViewController.movieDelegate = self
+            return
+        }
+        
+        if let movieDetailsViewController = segue.destination as? MovieDetailsViewController {
+            
+            guard let selectedMovie = sender as? Movie else { return }
+            movieDetailsViewController.movie = selectedMovie
+            return
         }
     }
-    
     
     // MARK: - Methods
     
@@ -91,5 +101,15 @@ extension MoviesListViewController: UITableViewDataSource {
             self.movies.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+}
+
+// MARK: - TableViewDelegate
+extension MoviesListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedMovie = self.movies[indexPath.row]
+        self.performSegue(withIdentifier: self.movieDetailsSegue, sender: selectedMovie)
     }
 }
