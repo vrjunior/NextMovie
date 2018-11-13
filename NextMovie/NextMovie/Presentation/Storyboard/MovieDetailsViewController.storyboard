@@ -56,7 +56,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="e1j-QT-lCc" firstAttribute="centerY" secondItem="gCX-TE-lkA" secondAttribute="centerY" id="2ug-5F-YWK"/>
                                                             <constraint firstAttribute="trailing" secondItem="e1j-QT-lCc" secondAttribute="trailing" id="8rv-J8-kPi"/>
@@ -83,7 +83,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="Ptg-6U-m5a" firstAttribute="leading" secondItem="jU1-wZ-jAL" secondAttribute="trailing" constant="12" id="6ao-WE-5sx"/>
                                                             <constraint firstAttribute="bottom" secondItem="jU1-wZ-jAL" secondAttribute="bottom" id="AkR-Uq-tgR"/>
@@ -97,7 +97,7 @@
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-JX-FIU" customClass="CategoriesCollectionView" customModule="NextMovie" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="379" width="343" height="42"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="QYa-Bn-Bfv"/>
                                                 </constraints>
@@ -116,7 +116,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOi-Ah-BrO">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="138" height="41"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -148,7 +148,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="67g-fJ-fUC" secondAttribute="bottom" constant="16" id="9yg-MA-SFt"/>
                                             <constraint firstItem="L6d-JX-FIU" firstAttribute="leading" secondItem="MHQ-LI-Myf" secondAttribute="leadingMargin" id="BdL-30-rX5"/>
@@ -204,6 +204,7 @@
                         <outlet property="coverImageView" destination="lHV-Rw-t9R" id="tbe-js-yxY"/>
                         <outlet property="durationLabel" destination="e1j-QT-lCc" id="vjv-uv-WDM"/>
                         <outlet property="ratingLabel" destination="Ptg-6U-m5a" id="5JT-hL-unv"/>
+                        <outlet property="sinopseFixedTitleLabel" destination="5E0-28-iXy" id="9IZ-DQ-kbz"/>
                         <outlet property="sinopseLabel" destination="67g-fJ-fUC" id="Q85-wB-iUM"/>
                         <outlet property="titleLabel" destination="td1-Pj-GMM" id="hha-ng-WUZ"/>
                         <segue destination="Jwx-Xf-f6W" kind="show" identifier="addEditMovie" id="tHN-ML-lSs"/>

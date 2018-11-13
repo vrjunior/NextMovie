@@ -12,6 +12,7 @@ class ReleaseTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: ReleaseCollectionView!
+    @IBOutlet weak var releaseFixedTitleLabel: UILabel!
     
     
     // MARK: - Super Methods

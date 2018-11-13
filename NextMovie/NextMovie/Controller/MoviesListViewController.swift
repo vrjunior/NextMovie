@@ -28,6 +28,13 @@ class MoviesListViewController: UIViewController {
     private var movies: [Movie] = []
     private let addMovieSegue = "addMovie"
     private let movieDetailsSegue = "movieDetails"
+    private var isDarkModeEnabled: Bool! {
+        didSet {
+            if oldValue != self.isDarkModeEnabled {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -38,6 +45,17 @@ class MoviesListViewController: UIViewController {
         if let movies = MovieServices.list() {
             self.movies = movies
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
+        self.setupViewMode(darkMode: self.isDarkModeEnabled)
+    }
+    
+    override func setupViewMode(darkMode: Bool) {
+        super.setupViewMode(darkMode: darkMode)
+        
+        self.view.backgroundColor = darkMode ? .black : .white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -117,6 +135,21 @@ extension MoviesListViewController: UITableViewDataSource {
             movieCell.prepare(with: currentMovie)
             
             return movieCell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if let movieCell = cell as? MovieTableViewCell {
+            movieCell.titleLabel.textColor = self.isDarkModeEnabled ? .white : .black
+            movieCell.durationLabel.textColor = self.isDarkModeEnabled ? .lightGray : .darkGray
+            movieCell.ratingLabel.textColor = self.isDarkModeEnabled ? .lightGray : .darkGray
+            
+            return
+        }
+        
+        if let releaseCell = cell as? ReleaseTableViewCell {
+            releaseCell.releaseFixedTitleLabel.textColor = self.isDarkModeEnabled ? .white : .black
         }
     }
     

@@ -17,6 +17,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var categoriesCollectionView: CategoriesCollectionView!
     @IBOutlet weak var sinopseLabel: UILabel!
+    @IBOutlet weak var sinopseFixedTitleLabel: UILabel!
     
     
     // MARK: - Properties
@@ -25,6 +26,7 @@ class MovieDetailsViewController: UIViewController {
     public weak var movieEditDelegate: MovieEditDelegate?
     
     private let addEditMovieSegue = "addEditMovie"
+    private var isDarkModeEnabled: Bool!
     
     
     // MARK: - Super Methods
@@ -37,6 +39,24 @@ class MovieDetailsViewController: UIViewController {
         }
         
         self.prepare(with: movie)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
+        self.setupViewMode(darkMode: self.isDarkModeEnabled)
+    }
+    
+    override func setupViewMode(darkMode: Bool) {
+        super.setupViewMode(darkMode: darkMode)
+        
+        self.view.backgroundColor = darkMode ? .black : .white
+        self.titleLabel.textColor = darkMode ? .white : .black
+        self.durationLabel.textColor = darkMode ? .lightGray : .darkGray
+        self.ratingLabel.textColor = darkMode ? .lightGray : .darkGray
+        self.sinopseLabel.textColor = darkMode ? .lightGray : .darkGray
+        self.sinopseFixedTitleLabel.textColor = darkMode ? .white : .black
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

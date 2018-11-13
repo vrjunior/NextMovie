@@ -47,11 +47,11 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wdg-DS-I8b">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="iIS-kZ-Aqf">
                                     <rect key="frame" x="0.0" y="371" width="375" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="173" id="6OU-Y7-nya" customClass="MovieTableViewCell" customModule="NextMovie" customModuleProvider="target">
@@ -63,6 +63,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-lU-keo" customClass="BorderImageView" customModule="NextMovie" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="10" width="112" height="149"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="149" id="XzH-fw-2EL"/>
                                                         <constraint firstAttribute="width" constant="112" id="sMk-UF-F1z"/>
@@ -96,7 +97,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Rfq-UD-9qt" secondAttribute="trailing" id="0RF-D2-trt"/>
                                                         <constraint firstItem="P5q-73-pvu" firstAttribute="top" secondItem="KZ2-NR-bfL" secondAttribute="top" id="20d-qe-FkC"/>
@@ -123,7 +124,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="zMu-iv-bhU" firstAttribute="leading" secondItem="qXH-We-NGR" secondAttribute="leading" id="05Q-Pj-iBr"/>
                                                         <constraint firstItem="tco-hK-HmG" firstAttribute="leading" secondItem="zMu-iv-bhU" secondAttribute="trailing" constant="12" id="4YK-3s-JhS"/>
@@ -134,6 +135,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="E3H-FX-pLi" firstAttribute="top" secondItem="h0d-lU-keo" secondAttribute="top" constant="2" id="AYc-8w-pOR"/>
                                                 <constraint firstItem="E3H-FX-pLi" firstAttribute="leading" secondItem="h0d-lU-keo" secondAttribute="trailing" constant="16" id="KCP-ed-jtW"/>
@@ -147,6 +149,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="h0d-lU-keo" secondAttribute="bottom" constant="10" id="rkA-RL-ai1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="coverImageView" destination="h0d-lU-keo" id="i8Y-jT-dTk"/>
                                             <outlet property="durationLabel" destination="Rfq-UD-9qt" id="oWz-LT-vDE"/>
@@ -233,7 +236,7 @@
                                                     </cells>
                                                 </collectionView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="zr4-hl-1t3" firstAttribute="top" secondItem="wrX-Au-dUs" secondAttribute="bottom" constant="12.5" id="3FA-vI-nAk"/>
                                                 <constraint firstItem="wrX-Au-dUs" firstAttribute="leading" secondItem="oYA-6G-SaP" secondAttribute="leading" constant="16" id="8TR-5m-Wa6"/>
@@ -244,9 +247,10 @@
                                                 <constraint firstItem="wrX-Au-dUs" firstAttribute="top" secondItem="oYA-6G-SaP" secondAttribute="top" constant="8" id="rSI-Rh-Yko"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="collectionView" destination="zr4-hl-1t3" id="Hck-zt-xxY"/>
+                                            <outlet property="releaseFixedTitleLabel" destination="wrX-Au-dUs" id="yIa-0t-Xgl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
