@@ -60,10 +60,9 @@ class MovieDetailsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let addEditMovieViewController = segue.destination as? AddMovieViewController {
+        if let addEditMovieViewController = segue.destination as? AddEditMovieViewController {
             addEditMovieViewController.movieToEdit = self.movie
             addEditMovieViewController.movieIndex = self.movieIndex
-            addEditMovieViewController.editorType = .edit
             addEditMovieViewController.movieEditDelegate = self
         }
     }

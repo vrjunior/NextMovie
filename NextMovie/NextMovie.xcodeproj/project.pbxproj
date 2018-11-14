@@ -18,7 +18,7 @@
 		D26424B121925A430071DE6F /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B021925A430071DE6F /* SettingsViewController.storyboard */; };
 		D26424B321925A6E0071DE6F /* MovieDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B221925A6E0071DE6F /* MovieDetailsViewController.storyboard */; };
 		D26424B521925A8B0071DE6F /* MoviesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */; };
-		D26424B721925FE00071DE6F /* AddMovieViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B621925FE00071DE6F /* AddMovieViewController.storyboard */; };
+		D26424B721925FE00071DE6F /* AddEditMovieViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B621925FE00071DE6F /* AddEditMovieViewController.storyboard */; };
 		D2755495219AF8750047DF7A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2755494219AF8750047DF7A /* UserDefaultsManager.swift */; };
 		D2755498219AF9AA0047DF7A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D2755497219AF9AA0047DF7A /* Settings.bundle */; };
 		D275549A219AFD480047DF7A /* UIViewController+DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2755499219AFD480047DF7A /* UIViewController+DarkMode.swift */; };
@@ -30,7 +30,7 @@
 		D298DBC12195C9DD00A28C94 /* MoviesNotFoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D298DBC02195C9DD00A28C94 /* MoviesNotFoundView.xib */; };
 		D298DBC32195D4DF00A28C94 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298DBC22195D4DF00A28C94 /* MovieDetailsViewController.swift */; };
 		D2B60C3621937D96007FB892 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3521937D96007FB892 /* Movie.swift */; };
-		D2B60C3821937E4B007FB892 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */; };
+		D2B60C3821937E4B007FB892 /* AddEditMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B60C3721937E4B007FB892 /* AddEditMovieViewController.swift */; };
 		D2C65DEF2196073D00ED21C9 /* MovieServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C65DEE2196073D00ED21C9 /* MovieServices.swift */; };
 		D2C65DF1219609CA00ED21C9 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C65DF0219609CA00ED21C9 /* CategoriesCollectionView.swift */; };
 		D2C65DF321960A9400ED21C9 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C65DF221960A9400ED21C9 /* CategoryCollectionViewCell.swift */; };
@@ -54,7 +54,7 @@
 		D26424B021925A430071DE6F /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		D26424B221925A6E0071DE6F /* MovieDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetailsViewController.storyboard; sourceTree = "<group>"; };
 		D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoviesListViewController.storyboard; sourceTree = "<group>"; };
-		D26424B621925FE00071DE6F /* AddMovieViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMovieViewController.storyboard; sourceTree = "<group>"; };
+		D26424B621925FE00071DE6F /* AddEditMovieViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddEditMovieViewController.storyboard; sourceTree = "<group>"; };
 		D2755494219AF8750047DF7A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		D2755497219AF9AA0047DF7A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D2755499219AFD480047DF7A /* UIViewController+DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DarkMode.swift"; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		D298DBC02195C9DD00A28C94 /* MoviesNotFoundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesNotFoundView.xib; sourceTree = "<group>"; };
 		D298DBC22195D4DF00A28C94 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		D2B60C3521937D96007FB892 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
+		D2B60C3721937E4B007FB892 /* AddEditMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditMovieViewController.swift; sourceTree = "<group>"; };
 		D2C65DEE2196073D00ED21C9 /* MovieServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServices.swift; sourceTree = "<group>"; };
 		D2C65DF0219609CA00ED21C9 /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
 		D2C65DF221960A9400ED21C9 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				D264249D219259BF0071DE6F /* MoviesListViewController.swift */,
-				D2B60C3721937E4B007FB892 /* AddMovieViewController.swift */,
+				D2B60C3721937E4B007FB892 /* AddEditMovieViewController.swift */,
 				D298DBC22195D4DF00A28C94 /* MovieDetailsViewController.swift */,
 				D2C65DF0219609CA00ED21C9 /* CategoriesCollectionView.swift */,
 				D2F2F50A219638E10087B899 /* ReleaseCollectionView.swift */,
@@ -178,7 +178,7 @@
 				D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */,
 				D26424B221925A6E0071DE6F /* MovieDetailsViewController.storyboard */,
 				D26424B021925A430071DE6F /* SettingsViewController.storyboard */,
-				D26424B621925FE00071DE6F /* AddMovieViewController.storyboard */,
+				D26424B621925FE00071DE6F /* AddEditMovieViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 				D298DBC12195C9DD00A28C94 /* MoviesNotFoundView.xib in Resources */,
 				D26424B521925A8B0071DE6F /* MoviesListViewController.storyboard in Resources */,
 				D26424A3219259C10071DE6F /* Assets.xcassets in Resources */,
-				D26424B721925FE00071DE6F /* AddMovieViewController.storyboard in Resources */,
+				D26424B721925FE00071DE6F /* AddEditMovieViewController.storyboard in Resources */,
 				D26424B321925A6E0071DE6F /* MovieDetailsViewController.storyboard in Resources */,
 				D2755498219AF9AA0047DF7A /* Settings.bundle in Resources */,
 				D26424A1219259BF0071DE6F /* Main.storyboard in Resources */,
@@ -335,7 +335,7 @@
 				D2755495219AF8750047DF7A /* UserDefaultsManager.swift in Sources */,
 				D2F2F50F2196392B0087B899 /* ReleaseCollectionViewCell.swift in Sources */,
 				D275549A219AFD480047DF7A /* UIViewController+DarkMode.swift in Sources */,
-				D2B60C3821937E4B007FB892 /* AddMovieViewController.swift in Sources */,
+				D2B60C3821937E4B007FB892 /* AddEditMovieViewController.swift in Sources */,
 				D27856442194ED4B00D36A54 /* UIViewController+HideKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

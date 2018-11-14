@@ -20,7 +20,6 @@ class SettingsViewController: UIViewController {
     
     
     // MARK: - Properties
-    var isDarkModeEnabled: Bool!
     
     
     // MARK: - Super Methods
@@ -34,10 +33,10 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
+        let isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
         
-        self.darkModeSwitch.isOn = self.isDarkModeEnabled
-        self.setupViewMode(darkMode: self.isDarkModeEnabled)
+        self.darkModeSwitch.isOn = isDarkModeEnabled
+        self.setupViewMode(darkMode: isDarkModeEnabled)
     }
     
     // MARK: - Methods
@@ -45,10 +44,10 @@ class SettingsViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func darkModeValueChanged(_ sender: UISwitch) {
-        self.isDarkModeEnabled = sender.isOn
-        UserDefaultsManager.isDarkModeEnabled = self.isDarkModeEnabled
+        let isDarkModeEnabled = sender.isOn
+        UserDefaultsManager.isDarkModeEnabled = isDarkModeEnabled
         
-        self.setupViewMode(darkMode: self.isDarkModeEnabled)
+        self.setupViewMode(darkMode: isDarkModeEnabled)
     }
     
     @IBAction func autoPlayValueChanged(_ sender: Any) {

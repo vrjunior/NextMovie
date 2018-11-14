@@ -214,10 +214,10 @@
             </objects>
             <point key="canvasLocation" x="493.60000000000002" y="-238.83058470764618"/>
         </scene>
-        <!--AddMovieViewController-->
+        <!--AddEditMovieViewController-->
         <scene sceneID="tjI-3z-GZw">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddMovieViewController" id="Jwx-Xf-f6W" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AddEditMovieViewController" id="Jwx-Xf-f6W" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPt-2W-xKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1357" y="-239"/>

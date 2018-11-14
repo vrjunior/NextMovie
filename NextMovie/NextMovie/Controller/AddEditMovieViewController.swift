@@ -9,12 +9,8 @@
 import Foundation
 import UIKit
 
-enum MovieEditorType {
-    case edit
-    case create
-}
 
-class AddMovieViewController: UIViewController {
+class AddEditMovieViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var coverImageView: UIImageView!
@@ -30,13 +26,13 @@ class AddMovieViewController: UIViewController {
     public weak var movieDelegate: MovieCreateDelegate?
     
     public weak var movieEditDelegate: MovieEditDelegate?
-    public var editorType: MovieEditorType = .create
     public var movieToEdit: Movie?
     public var movieIndex: Int?
     
     private var coverImage: UIImage?
     private var imagePicker = UIImagePickerController()
     private let timePicker = UIDatePicker()
+    private var isDarkModeEnabled: Bool!
     
     
     // MARK: - Super Methods
@@ -54,12 +50,29 @@ class AddMovieViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         self.setupDurationPicker()
         
-        if self.editorType == .edit {
-            guard let movieToEdit = self.movieToEdit else { return }
+        if let movieToEdit = self.movieToEdit {
             self.navigationItem.title = "Editar filme"
             self.addButton.setTitle("Salvar", for: .normal)
             self.prepare(with: movieToEdit)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
+        self.setupViewMode(darkMode: self.isDarkModeEnabled)
+    }
+    
+    override func setupViewMode(darkMode: Bool) {
+        super.setupViewMode(darkMode: darkMode)
+        
+        self.view.backgroundColor = darkMode ? .black : .white
+        self.titleTextField.textColor = darkMode ? .white : .black
+        self.durationTextField.textColor = darkMode ? .white : .black
+        self.categoriesTextField.textColor = darkMode ? .white : .black
+        self.ratingTextField.textColor = darkMode ? .white : .black
+        self.sinopseTextView.textColor = darkMode ? .white : .black
     }
     
     // MARK: - Methods
@@ -90,7 +103,14 @@ class AddMovieViewController: UIViewController {
             return
         }
         
-        var newMovie = Movie()
+        var newMovie: Movie
+        
+        if movieToEdit != nil {
+            newMovie = self.movieToEdit!
+        } else {
+            newMovie = Movie()
+        }
+        
         newMovie.image = self.coverImage
         newMovie.title = title
         newMovie.duration = duration
@@ -98,9 +118,9 @@ class AddMovieViewController: UIViewController {
         newMovie.rating = rating
         newMovie.sinopse = sinopse
         
-        if self.editorType == .create {
+        if movieToEdit == nil {
             self.movieDelegate?.add(newMovie)
-        } else if self.editorType == .edit {
+        } else {
             
             guard let movieIndex = self.movieIndex else { return }
             self.movieEditDelegate?.replace(at: movieIndex, newMovie: newMovie)
@@ -161,7 +181,7 @@ class AddMovieViewController: UIViewController {
 }
 
 // MARK: -
-extension AddMovieViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddEditMovieViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
@@ -187,7 +207,7 @@ extension AddMovieViewController: UIImagePickerControllerDelegate, UINavigationC
 }
 
 // MARK: - TextFieldDelegate
-extension AddMovieViewController: UITextFieldDelegate {
+extension AddEditMovieViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         

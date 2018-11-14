@@ -60,7 +60,7 @@ class MoviesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let addMovieViewController = segue.destination as? AddMovieViewController {
+        if let addMovieViewController = segue.destination as? AddEditMovieViewController {
             addMovieViewController.movieDelegate = self
             return
         }

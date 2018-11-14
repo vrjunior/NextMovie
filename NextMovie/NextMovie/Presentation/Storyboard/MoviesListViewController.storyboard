@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="1017" y="-78"/>
         </scene>
-        <!--AddMovieViewController-->
+        <!--AddEditMovieViewController-->
         <scene sceneID="5Wm-3Z-uk3">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddMovieViewController" id="sT9-Hh-Mkx" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AddEditMovieViewController" id="sT9-Hh-Mkx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d83-Er-5uB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002" y="115"/>
