@@ -23,7 +23,6 @@ class MovieDetailsViewController: UIViewController {
     // MARK: - Properties
     public var movie: Movie!
     public var movieIndex: Int!
-    public weak var movieEditDelegate: MovieEditDelegate?
     
     private let addEditMovieSegue = "addEditMovie"
     private var isDarkModeEnabled: Bool!
@@ -62,24 +61,21 @@ class MovieDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let addEditMovieViewController = segue.destination as? AddEditMovieViewController {
             addEditMovieViewController.movieToEdit = self.movie
-            addEditMovieViewController.movieIndex = self.movieIndex
-            addEditMovieViewController.movieEditDelegate = self
         }
     }
     
     // MARK: - Methods
     func prepare(with movie: Movie) {
         
-        self.coverImageView.image = movie.image
+        self.coverImageView.image = movie.uiImage
         self.titleLabel.text = movie.title
         self.durationLabel.text = movie.duration
         self.sinopseLabel.text = movie.sinopse
         
-        if let rating = movie.rating {
-            self.ratingLabel.text = String(rating)
-        }
+        self.ratingLabel.text = String(movie.rating)
+    
         
-        if let categories = movie.categories {
+        if let categories = movie.allCategories {
             self.categoriesCollectionView.categories = categories
         }
     }
@@ -91,13 +87,3 @@ class MovieDetailsViewController: UIViewController {
     }
 }
 
-
-// MARK: - MovieEditDelegate
-extension MovieDetailsViewController: MovieEditDelegate {
-    
-    func replace(at index: Int, newMovie: Movie) {
-        self.prepare(with: newMovie)
-        self.movieEditDelegate?.replace(at: index, newMovie: newMovie)
-    }
-    
-}

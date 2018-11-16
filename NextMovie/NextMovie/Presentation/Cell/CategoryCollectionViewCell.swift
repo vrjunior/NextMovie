@@ -28,10 +28,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         self.layer.borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
     }
     
-    func prepare(with category: String) {
-        self.categoryLabel.text = category
+    func prepare(with category: Category) {
+        self.categoryLabel.text = category.name
     }
-    
 }
 
 

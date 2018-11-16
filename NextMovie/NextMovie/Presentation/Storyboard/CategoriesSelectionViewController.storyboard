@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PvM-bz-F49">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selecione as categorias-->
+        <scene sceneID="aes-6x-hWo">
+            <objects>
+                <viewController id="PvM-bz-F49" customClass="CategoriesSelectionViewController" customModule="NextMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pYg-yo-PIz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wub-6B-21s">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Ufk-qi-c3B">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="UrY-5X-t3X" style="IBUITableViewCellStyleDefault" id="blD-7z-jkG">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="blD-7z-jkG" id="0Ck-5f-OgD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UrY-5X-t3X">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wub-6B-21s" firstAttribute="top" secondItem="jNx-8z-Na5" secondAttribute="top" id="GrP-Tf-yg6"/>
+                            <constraint firstItem="Wub-6B-21s" firstAttribute="leading" secondItem="jNx-8z-Na5" secondAttribute="leading" id="b2M-6C-cOt"/>
+                            <constraint firstItem="jNx-8z-Na5" firstAttribute="bottom" secondItem="Wub-6B-21s" secondAttribute="bottom" id="k3d-g1-mLH"/>
+                            <constraint firstItem="jNx-8z-Na5" firstAttribute="trailing" secondItem="Wub-6B-21s" secondAttribute="trailing" id="zXi-e2-wBY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jNx-8z-Na5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Selecione as categorias" id="5p5-7A-vgk">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" style="plain" id="VvU-vq-pjd">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="PvM-bz-F49" id="rFA-07-5Vn"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Feito" style="done" id="blt-7Z-WWp">
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="PvM-bz-F49" id="NeD-RW-TgN"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="done" systemItem="add" id="2x5-Y6-1lS">
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="PvM-bz-F49" id="ydo-wy-R1M"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="categoriesNotFoundView" destination="Jgz-1l-R2h" id="9aI-CB-Og1"/>
+                        <outlet property="tableView" destination="Wub-6B-21s" id="sP6-ZF-CEs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kp-lh-QMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Jgz-1l-R2h" customClass="CategoriesNotFoundView" customModule="NextMovie" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="372" height="227"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="qGD-o7-bHc"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="20" y="-325"/>
+        </scene>
+    </scenes>
+</document>

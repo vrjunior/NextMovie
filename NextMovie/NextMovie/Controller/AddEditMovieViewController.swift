@@ -10,40 +10,39 @@ import Foundation
 import UIKit
 
 
+protocol CategoryDelegate: class {
+    func select(categories: [Category])
+}
+
 class AddEditMovieViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
-    @IBOutlet weak var categoriesTextField: UITextField!
     @IBOutlet weak var ratingTextField: UITextField!
     @IBOutlet weak var sinopseTextView: CustomTextView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var categoriesCollectionView: CategoriesCollectionView!
+    @IBOutlet weak var selectCategoriesButton: UIButton!
     
     
     // MARK: - Properties
-    public weak var movieDelegate: MovieCreateDelegate?
-    
-    public weak var movieEditDelegate: MovieEditDelegate?
     public var movieToEdit: Movie?
-    public var movieIndex: Int?
     
     private var coverImage: UIImage?
     private var imagePicker = UIImagePickerController()
     private let timePicker = UIDatePicker()
+    private let selectCategoriesSegue = "selectCategories"
     private var isDarkModeEnabled: Bool!
     
     
     // MARK: - Super Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.titleTextField.delegate = self
         self.durationTextField.delegate = self
-        self.categoriesTextField.delegate = self
-        self.categoriesTextField.delegate = self
         self.ratingTextField.delegate = self
         
         self.imagePicker.delegate = self
@@ -67,12 +66,18 @@ class AddEditMovieViewController: UIViewController {
     override func setupViewMode(darkMode: Bool) {
         super.setupViewMode(darkMode: darkMode)
         
-        self.view.backgroundColor = darkMode ? .black : .white
-        self.titleTextField.textColor = darkMode ? .white : .black
-        self.durationTextField.textColor = darkMode ? .white : .black
-        self.categoriesTextField.textColor = darkMode ? .white : .black
-        self.ratingTextField.textColor = darkMode ? .white : .black
-        self.sinopseTextView.textColor = darkMode ? .white : .black
+        self.view.backgroundColor = darkMode ? .black : .white  
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let categoriesViewController = segue.destination as? CategoriesSelectionViewController {
+            categoriesViewController.categoryDelegate = self
+            
+            if let selectedCategories = self.movieToEdit?.allCategories {
+                categoriesViewController.selectedCategories = selectedCategories
+            }
+        }
     }
     
     // MARK: - Methods
@@ -85,11 +90,6 @@ class AddEditMovieViewController: UIViewController {
         
         guard let duration = self.durationTextField.text, !duration.trimmingCharacters(in: .whitespaces).isEmpty else {
             self.durationTextField.shake()
-            return
-        }
-        
-        guard let categories = self.categoriesTextField.text, !categories.trimmingCharacters(in: .whitespaces).isEmpty else {
-            self.categoriesTextField.shake()
             return
         }
         
@@ -111,52 +111,78 @@ class AddEditMovieViewController: UIViewController {
             newMovie = Movie()
         }
         
-        newMovie.image = self.coverImage
+        if let resizedImage = self.coverImage?.resize(to: 400) {
+            let imageRepresentation = resizedImage.jpegData(compressionQuality: 0.7)
+            newMovie.image = imageRepresentation
+        }
+        
         newMovie.title = title
         newMovie.duration = duration
-        newMovie.categories = categories.split(separator: ",").map { String($0) }
         newMovie.rating = rating
         newMovie.sinopse = sinopse
         
-        if movieToEdit == nil {
-            self.movieDelegate?.add(newMovie)
-        } else {
+        if let categories = self.categoriesCollectionView?.categories {
             
-            guard let movieIndex = self.movieIndex else { return }
-            self.movieEditDelegate?.replace(at: movieIndex, newMovie: newMovie)
+            if let oldCategories = newMovie.categories {
+                newMovie.removeFromCategories(oldCategories)
+            }
+            
+            newMovie.addToCategories(NSSet(array: categories))
         }
         
-        self.navigationController?.popViewController(animated: true)
+        if movieToEdit == nil {
+            MovieServices.save(movie: newMovie)
+        } else {
+            MovieServices.update()
+        }
+        
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     
     private func prepare(with movie: Movie) {
-        self.coverImage = movie.image
-        self.coverImageView.image = movie.image
+        self.coverImage = movie.uiImage
+        self.coverImageView.image = movie.uiImage
         self.titleTextField.text = movie.title
         self.durationTextField.text = movie.duration
         self.sinopseTextView.text = movie.sinopse
         
-        if var categories = movie.categories {
-            let firstCategory = categories.removeFirst()
-            self.categoriesTextField.text = categories.reduce(firstCategory, { $0 + ", " + $1  })
+        if let categories = movie.allCategories {
+            self.categoriesCollectionView.categories = categories
         }
         
-        if let rating = movie.rating {
-            self.ratingTextField.text = String(rating)
-        }
+        self.ratingTextField.text = String(movie.rating)
     }
     
     private func setupDurationPicker() {
         self.timePicker.datePickerMode = .countDownTimer
+        
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44))
+        let doneButton = UIBarButtonItem(title: "Ok", style: .done, target: self, action: #selector(durationPickerDone(_:)))
+        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(durationPickerCancel(_:)))
+        let flexibleButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        toolbar.items = [cancelButton, flexibleButton, doneButton]
+        
         self.durationTextField.inputView = self.timePicker
-        self.timePicker.addTarget(self, action: #selector(durationPickerValueChanged(_ :)), for: UIControl.Event.valueChanged)
+        self.durationTextField.inputAccessoryView = toolbar
     }
     
-    @objc func durationPickerValueChanged(_ sender: UIDatePicker) {
+    
+    @IBAction func selectCategories(_ sender: Any) {
+        self.performSegue(withIdentifier: self.selectCategoriesSegue, sender: nil)
+    }
+    
+    
+    @objc func durationPickerDone(_ sender: Any) {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH'h' mm'min'"
-        self.durationTextField.text = formatter.string(from: sender.date)
+        self.durationTextField.text = formatter.string(from: self.timePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    @objc func durationPickerCancel(_ sender: Any) {
+        self.view.endEditing(true)
     }
     
     // MARK: - IBActions
@@ -216,8 +242,6 @@ extension AddEditMovieViewController: UITextFieldDelegate {
         case self.titleTextField:
             self.durationTextField.becomeFirstResponder()
         case self.durationTextField:
-            self.categoriesTextField.becomeFirstResponder()
-        case self.categoriesTextField:
             self.ratingTextField.becomeFirstResponder()
         case self.ratingTextField:
             self.sinopseTextView.becomeFirstResponder()
@@ -229,4 +253,11 @@ extension AddEditMovieViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - CategoriesDelegate
+extension AddEditMovieViewController: CategoryDelegate {
+    
+    func select(categories: [Category]) {
+        self.categoriesCollectionView.categories = categories
+    }
+}
 

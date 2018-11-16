@@ -13,6 +13,7 @@ extension UIViewController {
     @objc func setupViewMode(darkMode: Bool) {
         
         self.tabBarController?.tabBar.barStyle = darkMode ? .black : .default
+        self.navigationController?.navigationBar.backgroundColor = darkMode ? .black : .white
     }
 }
 

@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQ5-hC-jrM" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="693"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8R6-qg-haV" userLabel="ImageCoverSection">
                                                 <rect key="frame" x="97" y="16" width="181" height="187"/>
@@ -72,7 +72,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7en-aG-bg3" userLabel="Form">
-                                                <rect key="frame" x="16" y="223" width="343" height="312"/>
+                                                <rect key="frame" x="16" y="223" width="343" height="358"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZp-Y2-WC2">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
@@ -92,17 +92,71 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Categorias" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM6-bE-8w4">
-                                                        <rect key="frame" x="0.0" y="92" width="343" height="36"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFg-vh-RkC" userLabel="CategorySection">
+                                                        <rect key="frame" x="0.0" y="92" width="343" height="82"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7E-lR-n3n">
+                                                                <rect key="frame" x="0.0" y="0.0" width="148" height="36"/>
+                                                                <state key="normal" title="Selecionar categorias">
+                                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="selectCategories:" destination="xty-g5-Do3" eventType="touchUpInside" id="xQa-ep-zWx"/>
+                                                                </connections>
+                                                            </button>
+                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="muF-qW-RKp" customClass="CategoriesCollectionView" customModule="NextMovie" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="40" width="343" height="42"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="NUa-Ja-406"/>
+                                                                </constraints>
+                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZoD-k0-RHv">
+                                                                    <size key="itemSize" width="100" height="36"/>
+                                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                </collectionViewFlowLayout>
+                                                                <cells>
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="mOt-jF-ajd" customClass="CategoryCollectionViewCell" customModule="NextMovie" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="3" width="100" height="36"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBd-OS-GPO">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </view>
+                                                                        <constraints>
+                                                                            <constraint firstItem="nBd-OS-GPO" firstAttribute="leading" secondItem="mOt-jF-ajd" secondAttribute="leading" id="8V7-YJ-DV8"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="nBd-OS-GPO" secondAttribute="bottom" id="KNp-DS-qNM"/>
+                                                                            <constraint firstItem="nBd-OS-GPO" firstAttribute="top" secondItem="mOt-jF-ajd" secondAttribute="top" id="Qyq-pJ-qal"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="nBd-OS-GPO" secondAttribute="trailing" id="w0J-6V-6vI"/>
+                                                                        </constraints>
+                                                                        <connections>
+                                                                            <outlet property="categoryLabel" destination="nBd-OS-GPO" id="ETd-gG-ofc"/>
+                                                                        </connections>
+                                                                    </collectionViewCell>
+                                                                </cells>
+                                                            </collectionView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="36" id="C5n-D4-RCy"/>
+                                                            <constraint firstItem="S7E-lR-n3n" firstAttribute="leading" secondItem="sFg-vh-RkC" secondAttribute="leading" id="5fN-FS-8qB"/>
+                                                            <constraint firstAttribute="bottom" secondItem="muF-qW-RKp" secondAttribute="bottom" id="E1j-6b-iRz"/>
+                                                            <constraint firstItem="muF-qW-RKp" firstAttribute="top" secondItem="S7E-lR-n3n" secondAttribute="bottom" constant="4" id="Kwg-Kf-vZL"/>
+                                                            <constraint firstItem="muF-qW-RKp" firstAttribute="leading" secondItem="sFg-vh-RkC" secondAttribute="leading" id="fls-6y-GJA"/>
+                                                            <constraint firstAttribute="trailing" secondItem="muF-qW-RKp" secondAttribute="trailing" id="jTB-8A-CSr"/>
+                                                            <constraint firstItem="S7E-lR-n3n" firstAttribute="top" secondItem="sFg-vh-RkC" secondAttribute="top" id="pPR-aD-8cN"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
+                                                    </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nota" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oz4-JF-zcM">
-                                                        <rect key="frame" x="0.0" y="138" width="343" height="36"/>
+                                                        <rect key="frame" x="0.0" y="184" width="343" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="2lY-8O-5di"/>
                                                         </constraints>
@@ -111,7 +165,7 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                     </textField>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DRW-Nu-zIv" customClass="CustomTextView" customModule="NextMovie" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="184" width="343" height="128"/>
+                                                        <rect key="frame" x="0.0" y="230" width="343" height="128"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" priority="750" constant="128" id="Kye-Zm-g3X"/>
@@ -138,7 +192,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37u-oL-5z2">
-                                                <rect key="frame" x="16" y="551" width="343" height="38"/>
+                                                <rect key="frame" x="16" y="597" width="343" height="38"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="05b-Iy-qoI"/>
@@ -173,7 +227,6 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="HQ5-hC-jrM" secondAttribute="trailing" id="Bs3-In-Plt"/>
                                     <constraint firstAttribute="bottom" secondItem="HQ5-hC-jrM" secondAttribute="bottom" id="F7n-xg-WJc"/>
-                                    <constraint firstItem="HQ5-hC-jrM" firstAttribute="height" secondItem="mCy-fs-GUo" secondAttribute="height" priority="250" id="Kw6-29-Ovo"/>
                                     <constraint firstItem="HQ5-hC-jrM" firstAttribute="width" secondItem="mCy-fs-GUo" secondAttribute="width" id="MyJ-hf-6vQ"/>
                                     <constraint firstItem="HQ5-hC-jrM" firstAttribute="top" secondItem="mCy-fs-GUo" secondAttribute="top" id="grK-Fh-Qao"/>
                                     <constraint firstItem="HQ5-hC-jrM" firstAttribute="leading" secondItem="mCy-fs-GUo" secondAttribute="leading" id="ncG-En-efr"/>
@@ -192,17 +245,27 @@
                     <navigationItem key="navigationItem" title="Adicionar filme" id="ItW-X6-tpI"/>
                     <connections>
                         <outlet property="addButton" destination="37u-oL-5z2" id="LAx-i7-2cS"/>
-                        <outlet property="categoriesTextField" destination="bM6-bE-8w4" id="M7A-G6-ZZH"/>
+                        <outlet property="categoriesCollectionView" destination="muF-qW-RKp" id="lLh-vZ-Fmh"/>
                         <outlet property="coverImageView" destination="D3p-Cd-zzR" id="uq9-8v-OcR"/>
                         <outlet property="durationTextField" destination="feP-hO-dUe" id="SkN-TO-Jyc"/>
                         <outlet property="ratingTextField" destination="Oz4-JF-zcM" id="AIL-rZ-zL3"/>
+                        <outlet property="selectCategoriesButton" destination="S7E-lR-n3n" id="WJ3-SV-IbW"/>
                         <outlet property="sinopseTextView" destination="DRW-Nu-zIv" id="GCw-ns-Fxw"/>
                         <outlet property="titleTextField" destination="HZp-Y2-WC2" id="ygv-Cy-aUE"/>
+                        <segue destination="XBM-lv-JEX" kind="show" identifier="selectCategories" id="5YS-aU-Pyy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zd-PF-8ZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="213.59999999999999" y="-226.23688155922042"/>
+        </scene>
+        <!--CategoriesSelectionViewController-->
+        <scene sceneID="R7y-gq-vzC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CategoriesSelectionViewController" id="XBM-lv-JEX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whF-aC-iER" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="-227"/>
         </scene>
     </scenes>
 </document>

@@ -10,7 +10,9 @@ import UIKit
 
 class CategoriesCollectionView: UICollectionView {
     
-    var categories: [String] = [] {
+    private var noCategorySelectedView: NoCategorySelectedView!
+    
+    var categories: [Category] = [] {
         didSet{
             self.reloadData()
         }
@@ -18,6 +20,7 @@ class CategoriesCollectionView: UICollectionView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.noCategorySelectedView = NoCategorySelectedView()
         self.dataSource = self
     }
 }
@@ -25,7 +28,9 @@ class CategoriesCollectionView: UICollectionView {
 extension CategoriesCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.categories.count
+        let categoriesCount = self.categories.count
+        self.backgroundView = (categoriesCount <= 0) ? self.noCategorySelectedView : nil
+        return categoriesCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

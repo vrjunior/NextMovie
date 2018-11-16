@@ -8,14 +8,6 @@
 
 import UIKit
 
-protocol MovieCreateDelegate: class {
-    func add(_ movie: Movie)
-}
-
-protocol MovieEditDelegate: class {
-    func replace(at index: Int, newMovie: Movie)
-}
-
 class MoviesListViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -35,6 +27,7 @@ class MoviesListViewController: UIViewController {
             }
         }
     }
+    private var refreshControl: UIRefreshControl!
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -42,14 +35,16 @@ class MoviesListViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        if let movies = MovieServices.list() {
-            self.movies = movies
-        }
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        self.tableView.refreshControl = self.refreshControl
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
         self.setupViewMode(darkMode: self.isDarkModeEnabled)
+        
+        self.retrieveMovies()
     }
     
     override func setupViewMode(darkMode: Bool) {
@@ -60,23 +55,30 @@ class MoviesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let addMovieViewController = segue.destination as? AddEditMovieViewController {
-            addMovieViewController.movieDelegate = self
-            return
-        }
         
         if let movieDetailsViewController = segue.destination as? MovieDetailsViewController {
             
             guard let tuple = sender as? (movie: Movie, index: Int) else { return }
             movieDetailsViewController.movie = tuple.movie
             movieDetailsViewController.movieIndex = tuple.index
-            movieDetailsViewController.movieEditDelegate = self
             return
         }
     }
     
     // MARK: - Methods
+    @objc private func refresh(_ sender: UIRefreshControl) {
+        self.refreshControl.endRefreshing()
+        
+        self.retrieveMovies()
+    }
     
+    private func retrieveMovies() {
+        
+        if let movies = MovieServices.list() {
+            self.movies = movies
+            self.tableView.reloadData()
+        }
+    }
     
     
     // MARK: - IBActions
@@ -85,22 +87,6 @@ class MoviesListViewController: UIViewController {
     }
 }
 
-// MARK: - MovieDelegate
-extension MoviesListViewController: MovieCreateDelegate {
-    
-    func add(_ movie: Movie) {
-        self.movies.append(movie)
-        self.tableView.reloadData()
-    }
-}
-
-// MARK: - MovieEditDelegate
-extension MoviesListViewController: MovieEditDelegate {
-    func replace(at index: Int, newMovie: Movie) {
-        self.movies[index] = newMovie
-        self.tableView.reloadData()
-    }
-}
 
 // MARK: - TableViewDataSource
 extension MoviesListViewController: UITableViewDataSource {
@@ -116,26 +102,14 @@ extension MoviesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentMovie = self.movies[indexPath.row]
         
-        if currentMovie.itemType == .list {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "releaseCell", for: indexPath)
-            
-            guard let releaseCell = cell as? ReleaseTableViewCell else { return cell }
-            guard let items = currentMovie.items else { return cell }
-            
-            releaseCell.prepare(with: items)
-            
-            return releaseCell
-            
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            
-            guard let movieCell = cell as? MovieTableViewCell else { return cell }
-            
-            
-            movieCell.prepare(with: currentMovie)
-            
-            return movieCell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        guard let movieCell = cell as? MovieTableViewCell else { return cell }
+        
+        
+        movieCell.prepare(with: currentMovie)
+        
+        return movieCell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -162,7 +136,8 @@ extension MoviesListViewController: UITableViewDataSource {
                    forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            self.movies.remove(at: indexPath.row)
+            let movie = self.movies.remove(at: indexPath.row)
+            MovieServices.delete(movie: movie)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             return
         }

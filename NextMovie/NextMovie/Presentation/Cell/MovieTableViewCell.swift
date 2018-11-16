@@ -35,13 +35,11 @@ class MovieTableViewCell: UITableViewCell {
     // MARK: - Methods
     func prepare(with movie: Movie) {
         
-        self.coverImageView.image = movie.image
+        self.coverImageView.image = movie.uiImage
         self.titleLabel.text = movie.title
         self.durationLabel.text = movie.duration
         
-        if let rating = movie.rating {
-            self.ratingLabel.text = String(rating)
-        }
+        self.ratingLabel.text = String(movie.rating)
     }
     
 }

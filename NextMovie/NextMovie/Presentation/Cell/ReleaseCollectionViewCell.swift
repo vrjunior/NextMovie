@@ -21,7 +21,7 @@ class ReleaseCollectionViewCell: UICollectionViewCell {
     
     
     func prepare(with movie: Movie) {
-        self.coverImageView.image = movie.image
+       // self.coverImageView.image = movie.uiImage
         self.titleLabel.text = movie.title
     }
     
