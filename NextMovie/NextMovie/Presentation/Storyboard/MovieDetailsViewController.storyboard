@@ -192,11 +192,18 @@
                         <viewLayoutGuide key="safeArea" id="IbM-bX-zBF"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="9ZM-Y7-Yko">
-                        <barButtonItem key="rightBarButtonItem" image="EditMovieIcon" id="LnW-wF-p1A">
-                            <connections>
-                                <action selector="editButtonPressed:" destination="vNt-Ck-fcB" id="7Wr-eU-DRl"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="EditMovieIcon" id="LnW-wF-p1A">
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="vNt-Ck-fcB" id="7Wr-eU-DRl"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ReminderIcon" id="eGr-vr-fwT">
+                                <connections>
+                                    <action selector="createReminderButtonPressed:" destination="vNt-Ck-fcB" id="Unx-r3-mQR"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -208,11 +215,20 @@
                         <outlet property="sinopseLabel" destination="67g-fJ-fUC" id="Q85-wB-iUM"/>
                         <outlet property="titleLabel" destination="td1-Pj-GMM" id="hha-ng-WUZ"/>
                         <segue destination="Jwx-Xf-f6W" kind="show" identifier="addEditMovie" id="tHN-ML-lSs"/>
+                        <segue destination="0rn-GG-enV" kind="show" identifier="addReminder" id="b5x-ML-EKm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtB-rd-Dai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="493.60000000000002" y="-238.83058470764618"/>
+        </scene>
+        <!--AddReminderViewController-->
+        <scene sceneID="09V-UK-Oop">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddReminderViewController" id="0rn-GG-enV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFE-8U-ehB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1358" y="-345"/>
         </scene>
         <!--AddEditMovieViewController-->
         <scene sceneID="tjI-3z-GZw">
@@ -225,6 +241,7 @@
     </scenes>
     <resources>
         <image name="EditMovieIcon" width="25" height="25"/>
+        <image name="ReminderIcon" width="22" height="25"/>
         <image name="StarIcon" width="24" height="23"/>
         <image name="TimeIcon" width="24" height="24"/>
     </resources>

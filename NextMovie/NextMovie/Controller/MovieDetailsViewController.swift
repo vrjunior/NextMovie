@@ -25,6 +25,7 @@ class MovieDetailsViewController: UIViewController {
     public var movieIndex: Int!
     
     private let addEditMovieSegue = "addEditMovie"
+    private let addReminderSegue = "addReminder"
     private var isDarkModeEnabled: Bool!
     
     
@@ -61,6 +62,11 @@ class MovieDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let addEditMovieViewController = segue.destination as? AddEditMovieViewController {
             addEditMovieViewController.movieToEdit = self.movie
+            return
+        }
+        
+        if let addReminderViewController = segue.destination as? AddReminderViewController {
+            addReminderViewController.movie = self.movie
         }
     }
     
@@ -84,6 +90,10 @@ class MovieDetailsViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func editButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: self.addEditMovieSegue, sender: nil)
+    }
+    
+    @IBAction func createReminderButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: self.addReminderSegue, sender: nil)
     }
 }
 
