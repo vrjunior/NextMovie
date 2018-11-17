@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Selecione as categorias-->
+        <!--Categorias-->
         <scene sceneID="aes-6x-hWo">
             <objects>
                 <viewController id="PvM-bz-F49" customClass="CategoriesSelectionViewController" customModule="NextMovie" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,11 +20,12 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wub-6B-21s">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Ufk-qi-c3B">
                                     <rect key="frame" x="0.0" y="72" width="375" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="UrY-5X-t3X" style="IBUITableViewCellStyleDefault" id="blD-7z-jkG">
@@ -42,7 +43,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -56,7 +59,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jNx-8z-Na5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Selecione as categorias" id="5p5-7A-vgk">
+                    <navigationItem key="navigationItem" title="Categorias" id="5p5-7A-vgk">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" style="plain" id="VvU-vq-pjd">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="PvM-bz-F49" id="rFA-07-5Vn"/>

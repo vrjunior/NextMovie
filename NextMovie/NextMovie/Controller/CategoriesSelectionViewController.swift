@@ -18,6 +18,7 @@ class CategoriesSelectionViewController: UIViewController {
     public weak var categoryDelegate: CategoryDelegate?
     public var selectedCategories: [Category] = []
     private var categories: [Category] = []
+    private var isDarkModeEnabled: Bool!
     
     // MARK: - Super Methods
     
@@ -28,6 +29,20 @@ class CategoriesSelectionViewController: UIViewController {
         self.tableView.delegate = self
         
         self.retrieveCategories()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
+        self.setupViewMode(darkMode: self.isDarkModeEnabled)
+    }
+    
+    override func setupViewMode(darkMode: Bool) {
+        
+        super.setupViewMode(darkMode: darkMode)
+        self.view.backgroundColor = darkMode ? .black : .white
+        
     }
     
     // MARK: - Methods
@@ -101,6 +116,11 @@ extension CategoriesSelectionViewController: UITableViewDataSource {
         cell.textLabel?.text = currentCategory.name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.textLabel?.textColor = self.isDarkModeEnabled ? .white : .black
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

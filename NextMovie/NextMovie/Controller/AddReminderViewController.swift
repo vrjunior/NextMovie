@@ -36,6 +36,26 @@ class AddReminderViewController: UIViewController {
         self.prepare(with: movie)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+        let isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
+        self.setupViewMode(darkMode: isDarkModeEnabled)
+    }
+    
+    override func setupViewMode(darkMode: Bool) {
+        
+        super.setupViewMode(darkMode: darkMode)
+        self.view.backgroundColor = darkMode ? .black : .white
+        self.reminderTitleLabel.textColor = darkMode ? .white : .black
+        
+        if darkMode {
+            self.reminderDatePicker?.setValue(UIColor.white, forKey: "textColor")
+        } else {
+            self.reminderDatePicker?.setValue(UIColor.black, forKey: "textColor")
+        }
+    }
+    
     // MARK: - Methods
     private func prepare(with movie: Movie) {
         self.reminderTitleLabel.text = "Lembrete para assistir o filme \(movie.title ?? "")"
