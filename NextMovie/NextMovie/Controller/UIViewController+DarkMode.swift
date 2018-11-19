@@ -16,4 +16,3 @@ extension UIViewController {
         self.navigationController?.navigationBar.backgroundColor = darkMode ? .black : .white
     }
 }
-

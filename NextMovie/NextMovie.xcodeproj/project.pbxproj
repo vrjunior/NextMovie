@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733EF566E0470B08FCCD2A49 /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1346B3F5383E7D73D60599 /* Pods_NextMovie.framework */; };
 		D23A3FFE219F1DB300507EE9 /* CategoriesSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A3FFD219F1DB300507EE9 /* CategoriesSelectionViewController.swift */; };
 		D23A4000219F1DD600507EE9 /* CategoriesSelectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23A3FFF219F1DD600507EE9 /* CategoriesSelectionViewController.storyboard */; };
 		D23A4002219F23A900507EE9 /* CategoriesNotFoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23A4001219F23A900507EE9 /* CategoriesNotFoundView.xib */; };
@@ -59,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10FFF40EB9FF56F6FC9A368B /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
+		9FB735809E893A491F9CEDFB /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		D23A3FFD219F1DB300507EE9 /* CategoriesSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSelectionViewController.swift; sourceTree = "<group>"; };
 		D23A3FFF219F1DD600507EE9 /* CategoriesSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriesSelectionViewController.storyboard; sourceTree = "<group>"; };
 		D23A4001219F23A900507EE9 /* CategoriesNotFoundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesNotFoundView.xib; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		D2F2F50A219638E10087B899 /* ReleaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseCollectionView.swift; sourceTree = "<group>"; };
 		D2F2F50C2196390D0087B899 /* ReleaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTableViewCell.swift; sourceTree = "<group>"; };
 		D2F2F50E2196392B0087B899 /* ReleaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA1346B3F5383E7D73D60599 /* Pods_NextMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +121,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				733EF566E0470B08FCCD2A49 /* Pods_NextMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EA193E24B0776F0AB13A402 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FB735809E893A491F9CEDFB /* Pods-NextMovie.debug.xcconfig */,
+				10FFF40EB9FF56F6FC9A368B /* Pods-NextMovie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D23CCC852193206100AF8CD4 /* Mechanism */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +193,8 @@
 			children = (
 				D264249A219259BF0071DE6F /* NextMovie */,
 				D2642499219259BF0071DE6F /* Products */,
+				1EA193E24B0776F0AB13A402 /* Pods */,
+				EA3C3E435905B6C0C36DCBA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,6 +324,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		EA3C3E435905B6C0C36DCBA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA1346B3F5383E7D73D60599 /* Pods_NextMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,9 +339,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26424AA219259C10071DE6F /* Build configuration list for PBXNativeTarget "NextMovie" */;
 			buildPhases = (
+				6F233397C5508C75E444D083 /* [CP] Check Pods Manifest.lock */,
 				D2642494219259BF0071DE6F /* Sources */,
 				D2642495219259BF0071DE6F /* Frameworks */,
 				D2642496219259BF0071DE6F /* Resources */,
+				D2F334F721A350B100DF800F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -383,6 +409,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F233397C5508C75E444D083 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NextMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2F334F721A350B100DF800F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2642494219259BF0071DE6F /* Sources */ = {
@@ -568,6 +632,7 @@
 		};
 		D26424AB219259C10071DE6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB735809E893A491F9CEDFB /* Pods-NextMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +652,7 @@
 		};
 		D26424AC219259C10071DE6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10FFF40EB9FF56F6FC9A368B /* Pods-NextMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -13,7 +13,7 @@ class CategoriesCollectionView: UICollectionView {
     private var noCategorySelectedView: NoCategorySelectedView!
     
     var categories: [Category] = [] {
-        didSet{
+        didSet {
             self.reloadData()
         }
     }
@@ -33,7 +33,9 @@ extension CategoriesCollectionView: UICollectionViewDataSource {
         return categoriesCount
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
         guard let categoryCell = cell as? CategoryCollectionViewCell else {

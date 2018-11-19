@@ -1,0 +1,11 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+
+disabled_rules:
+  # whitespaces disabled does not compact too much code
+  - trailing_whitespace
+  - vertical_whitespace
+
+  # indentificar disabled to allow name property as id
+  - identifier_name

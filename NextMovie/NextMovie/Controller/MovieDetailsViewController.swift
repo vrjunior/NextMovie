@@ -96,4 +96,3 @@ class MovieDetailsViewController: UIViewController {
         self.performSegue(withIdentifier: self.addReminderSegue, sender: nil)
     }
 }
-

@@ -26,7 +26,8 @@ class ReleaseCollectionView: UICollectionView, UICollectionViewDataSource {
         return self.recomendations.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
         guard let recomendationCell = cell as? ReleaseCollectionViewCell else {

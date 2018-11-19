@@ -68,6 +68,7 @@ import UIKit
             self.resizePlaceholder()
         }
     }
+    
         
     /// Resize the placeholder UILabel to make sure it's in the same position as the UITextView text
     private func resizePlaceholder() {

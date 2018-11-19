@@ -67,6 +67,9 @@ class AddReminderViewController: UIViewController {
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
             print(success)
+            if let error = error {
+                print(error)
+            }
         }
         
         let id = String(Date().timeIntervalSince1970)
@@ -82,7 +85,8 @@ class AddReminderViewController: UIViewController {
             content.body = description
         }
         
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: self.reminderDatePicker.date)
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute],
+                                                             from: self.reminderDatePicker.date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
         let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)

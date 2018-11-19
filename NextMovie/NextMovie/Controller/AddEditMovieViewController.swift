@@ -158,8 +158,12 @@ class AddEditMovieViewController: UIViewController {
         self.timePicker.datePickerMode = .countDownTimer
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44))
-        let doneButton = UIBarButtonItem(title: "Ok", style: .done, target: self, action: #selector(durationPickerDone(_:)))
-        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(durationPickerCancel(_:)))
+        
+        let doneButton = UIBarButtonItem(title: "Ok", style: .done, target: self,
+                                         action: #selector(durationPickerDone(_:)))
+        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self,
+                                           action: #selector(durationPickerCancel(_:)))
+        
         let flexibleButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         toolbar.items = [cancelButton, flexibleButton, doneButton]
@@ -260,4 +264,3 @@ extension AddEditMovieViewController: CategoryDelegate {
         self.categoriesCollectionView.categories = categories
     }
 }
-

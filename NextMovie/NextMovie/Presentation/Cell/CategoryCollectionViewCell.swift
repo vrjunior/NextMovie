@@ -32,5 +32,3 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         self.categoryLabel.text = category.name
     }
 }
-
-

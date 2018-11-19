@@ -60,7 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="jNx-8z-Na5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Categorias" id="5p5-7A-vgk">
-                        <barButtonItem key="leftBarButtonItem" title="Cancelar" style="plain" id="VvU-vq-pjd">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" style="done" id="VvU-vq-pjd">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="PvM-bz-F49" id="rFA-07-5Vn"/>
                             </connections>

@@ -23,7 +23,8 @@ class KeyboardScrollView: UIScrollView {
     }
     
     deinit {
-        self.unregisterToKeyboardNotification()
+        // unregister notification
+        NotificationCenter.default.removeObserver(self)
     }
     
     
@@ -33,10 +34,6 @@ class KeyboardScrollView: UIScrollView {
                                                name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    private func unregisterToKeyboardNotification() {
-        NotificationCenter.default.removeObserver(self)
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
