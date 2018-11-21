@@ -9,5 +9,10 @@
 import Foundation
 
 enum Errors: Error {
+    case invalidJSON
+    case url
+    case noResponse
+    case noData
+    case httpError(code: Int)
     case coreDataError
 }

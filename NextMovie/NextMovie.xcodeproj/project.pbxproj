@@ -27,6 +27,8 @@
 		D258724B219DEB0700D0EFDB /* MovieCoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D258724A219DEB0700D0EFDB /* MovieCoreDataDAO.swift */; };
 		D258724D219DECA200D0EFDB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D258724C219DECA200D0EFDB /* Errors.swift */; };
 		D258724F219DEDA600D0EFDB /* UIImage+Resized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D258724E219DEDA600D0EFDB /* UIImage+Resized.swift */; };
+		D25DACEB21A58E9E00ADF93A /* MovieApiDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25DACEA21A58E9E00ADF93A /* MovieApiDao.swift */; };
+		D25DACED21A58EEF00ADF93A /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25DACEC21A58EEF00ADF93A /* APIRoute.swift */; };
 		D2635F19219F8B6C002B0140 /* AddReminderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2635F18219F8B6C002B0140 /* AddReminderViewController.storyboard */; };
 		D2635F1B219F906D002B0140 /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2635F1A219F906D002B0140 /* AddReminderViewController.swift */; };
 		D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264249B219259BF0071DE6F /* AppDelegate.swift */; };
@@ -81,6 +83,8 @@
 		D258724A219DEB0700D0EFDB /* MovieCoreDataDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCoreDataDAO.swift; sourceTree = "<group>"; };
 		D258724C219DECA200D0EFDB /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		D258724E219DEDA600D0EFDB /* UIImage+Resized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resized.swift"; sourceTree = "<group>"; };
+		D25DACEA21A58E9E00ADF93A /* MovieApiDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiDao.swift; sourceTree = "<group>"; };
+		D25DACEC21A58EEF00ADF93A /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
 		D2635F18219F8B6C002B0140 /* AddReminderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddReminderViewController.storyboard; sourceTree = "<group>"; };
 		D2635F1A219F906D002B0140 /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
 		D2642498219259BF0071DE6F /* NextMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,13 +183,22 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		D2587249219DEAED00D0EFDB /* DAO */ = {
+		D2587249219DEAED00D0EFDB /* CoreDataDAO */ = {
 			isa = PBXGroup;
 			children = (
 				D258724A219DEB0700D0EFDB /* MovieCoreDataDAO.swift */,
 				D23A4005219F25AF00507EE9 /* CategoryCoreDataDAO.swift */,
 			);
-			path = DAO;
+			path = CoreDataDAO;
+			sourceTree = "<group>";
+		};
+		D25DACE921A58E8600ADF93A /* APIDAO */ = {
+			isa = PBXGroup;
+			children = (
+				D25DACEA21A58E9E00ADF93A /* MovieApiDao.swift */,
+				D25DACEC21A58EEF00ADF93A /* APIRoute.swift */,
+			);
+			path = APIDAO;
 			sourceTree = "<group>";
 		};
 		D264248F219259BF0071DE6F = {
@@ -309,7 +322,8 @@
 		D2C65DEC2196071F00ED21C9 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				D2587249219DEAED00D0EFDB /* DAO */,
+				D25DACE921A58E8600ADF93A /* APIDAO */,
+				D2587249219DEAED00D0EFDB /* CoreDataDAO */,
 				D2C65DED2196072F00ED21C9 /* Services */,
 			);
 			path = Business;
@@ -463,6 +477,7 @@
 				D23A4004219F23BE00507EE9 /* CategoriesNotFound.swift in Sources */,
 				D298DBC32195D4DF00A28C94 /* MovieDetailsViewController.swift in Sources */,
 				D28F921121932507009A8B10 /* BorderImageView.swift in Sources */,
+				D25DACEB21A58E9E00ADF93A /* MovieApiDao.swift in Sources */,
 				D258724D219DECA200D0EFDB /* Errors.swift in Sources */,
 				D258724B219DEB0700D0EFDB /* MovieCoreDataDAO.swift in Sources */,
 				D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */,
@@ -476,6 +491,7 @@
 				D2C65DEF2196073D00ED21C9 /* MovieServices.swift in Sources */,
 				D23A4008219F260D00507EE9 /* CategoryServices.swift in Sources */,
 				D258723E219DC44C00D0EFDB /* NextMovie.xcdatamodeld in Sources */,
+				D25DACED21A58EEF00ADF93A /* APIRoute.swift in Sources */,
 				D2F2F50D2196390D0087B899 /* ReleaseTableViewCell.swift in Sources */,
 				D27856422194E6AF00D36A54 /* KeyboardScrollView.swift in Sources */,
 				D2587248219DE90100D0EFDB /* Category.swift in Sources */,
