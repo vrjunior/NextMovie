@@ -21,6 +21,9 @@
 		D23CCC882193216800AF8CD4 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CCC872193216800AF8CD4 /* CustomTextView.swift */; };
 		D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2B921947315008C453A /* MovieTableViewCell.swift */; };
 		D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2BB219479E7008C453A /* UIView+Shake.swift */; };
+		D25657FB21A5C187000D3DC5 /* ItunesMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */; };
+		D25657FD21A5C27C000D3DC5 /* ItunesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25657FC21A5C27C000D3DC5 /* ItunesResponse.swift */; };
+		D25657FF21A5C81B000D3DC5 /* SelectTrailer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25657FE21A5C81B000D3DC5 /* SelectTrailer.storyboard */; };
 		D258723B219DC40F00D0EFDB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D258723A219DC40F00D0EFDB /* CoreDataManager.swift */; };
 		D258723E219DC44C00D0EFDB /* NextMovie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D258723C219DC44C00D0EFDB /* NextMovie.xcdatamodeld */; };
 		D2587248219DE90100D0EFDB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2587247219DE90100D0EFDB /* Category.swift */; };
@@ -77,6 +80,9 @@
 		D23CCC872193216800AF8CD4 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		D251D2B921947315008C453A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		D251D2BB219479E7008C453A /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMovie.swift; sourceTree = "<group>"; };
+		D25657FC21A5C27C000D3DC5 /* ItunesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesResponse.swift; sourceTree = "<group>"; };
+		D25657FE21A5C81B000D3DC5 /* SelectTrailer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectTrailer.storyboard; sourceTree = "<group>"; };
 		D258723A219DC40F00D0EFDB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D258723D219DC44C00D0EFDB /* NextMovie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NextMovie.xcdatamodel; sourceTree = "<group>"; };
 		D2587247219DE90100D0EFDB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -270,6 +276,7 @@
 				D26424B621925FE00071DE6F /* AddEditMovieViewController.storyboard */,
 				D23A3FFF219F1DD600507EE9 /* CategoriesSelectionViewController.storyboard */,
 				D2635F18219F8B6C002B0140 /* AddReminderViewController.storyboard */,
+				D25657FE21A5C81B000D3DC5 /* SelectTrailer.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -315,6 +322,8 @@
 				D2B60C3521937D96007FB892 /* Movie.swift */,
 				D2587247219DE90100D0EFDB /* Category.swift */,
 				D258724C219DECA200D0EFDB /* Errors.swift */,
+				D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */,
+				D25657FC21A5C27C000D3DC5 /* ItunesResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,6 +417,7 @@
 			files = (
 				D26424B121925A430071DE6F /* SettingsViewController.storyboard in Resources */,
 				D26424A6219259C10071DE6F /* LaunchScreen.storyboard in Resources */,
+				D25657FF21A5C81B000D3DC5 /* SelectTrailer.storyboard in Resources */,
 				D23A400F219F6DD500507EE9 /* NoCategorySelectedView.xib in Resources */,
 				D23A4002219F23A900507EE9 /* CategoriesNotFoundView.xib in Resources */,
 				D2635F19219F8B6C002B0140 /* AddReminderViewController.storyboard in Resources */,
@@ -481,6 +491,7 @@
 				D258724D219DECA200D0EFDB /* Errors.swift in Sources */,
 				D258724B219DEB0700D0EFDB /* MovieCoreDataDAO.swift in Sources */,
 				D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */,
+				D25657FD21A5C27C000D3DC5 /* ItunesResponse.swift in Sources */,
 				D258723B219DC40F00D0EFDB /* CoreDataManager.swift in Sources */,
 				D264249E219259BF0071DE6F /* MoviesListViewController.swift in Sources */,
 				D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */,
@@ -489,6 +500,7 @@
 				D258724F219DEDA600D0EFDB /* UIImage+Resized.swift in Sources */,
 				D23C6990219F9490008B23C3 /* Date+Formatted.swift in Sources */,
 				D2C65DEF2196073D00ED21C9 /* MovieServices.swift in Sources */,
+				D25657FB21A5C187000D3DC5 /* ItunesMovie.swift in Sources */,
 				D23A4008219F260D00507EE9 /* CategoryServices.swift in Sources */,
 				D258723E219DC44C00D0EFDB /* NextMovie.xcdatamodeld in Sources */,
 				D25DACED21A58EEF00ADF93A /* APIRoute.swift in Sources */,

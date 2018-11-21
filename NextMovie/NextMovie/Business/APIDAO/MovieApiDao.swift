@@ -26,14 +26,60 @@ class MovieAPIDAO {
     private static let session = URLSession(configuration: configuration)
     
     
-    static func getMovieInfo(term: String, country: Country = .usa, onSuccess: () -> Void,
-                             onFailure: (Error) ->  Void ) {
+    static func getMovieInfo(term: String, country: Country = .usa, onSuccess: @escaping ([ItunesMovie]) -> Void,
+                             onFailure: @escaping (Error) -> Void) {
         
-        guard let url = URL(string: APIRoute.iTunesBase) else {
+        let mediaType = "movie"
+        let entityType = "movie"
+        
+        guard var urlComp = URLComponents(string: APIRoute.iTunesBase) else {
+            return onFailure(Errors.url)
+        }
+        
+        let mediaParam = URLQueryItem(name: "media", value: mediaType)
+        let entityParam = URLQueryItem(name: "entity", value: entityType)
+        let countryParam = URLQueryItem(name: "country", value: country.rawValue)
+        let termParam = URLQueryItem(name: "term", value: term)
+        
+        urlComp.queryItems = [mediaParam, entityParam, countryParam, termParam]
+        
+        guard let url = urlComp.url else {
             return onFailure(Errors.url)
         }
         
         
+        self.session.dataTask(with: url) { (data, response, error) in
+            
+            if error != nil {
+                return onFailure(Errors.noResponse)
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                return onFailure(Errors.noResponse)
+            }
+            
+            guard let data = data else {
+                return onFailure(Errors.noData)
+            }
+            
+            switch httpResponse.statusCode {
+            case 200...299:
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    jsonDecoder.dateDecodingStrategy = .iso8601
+                    guard let movies = try jsonDecoder.decode(ItunesResponse.self, from: data).results else {
+                        return onFailure(Errors.noData)
+                    }
+                    
+                    onSuccess(movies)
+                } catch {
+                    onFailure(Errors.invalidJSON)
+                }
+            default:
+                return onFailure(Errors.httpError(code: httpResponse.statusCode))
+            }
+        }
+       
         
     }
 }

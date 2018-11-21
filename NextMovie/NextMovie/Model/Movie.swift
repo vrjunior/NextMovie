@@ -23,6 +23,7 @@ class Movie: NSManagedObject {
     @NSManaged public var sinopse: String?
     @NSManaged public var rating: Double
     @NSManaged public var categories: NSSet?
+    @NSManaged public var trailerUrlPath: String?
     
     var allCategories: [Category]? {
         return self.categories?.allObjects as? [Category]
