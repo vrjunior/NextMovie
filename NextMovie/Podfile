@@ -7,4 +7,5 @@ target 'NextMovie' do
 
   # Pods for NextMovie
   pod 'SwiftLint'
+  pod 'Kingfisher'
 end

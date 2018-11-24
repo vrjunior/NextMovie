@@ -14,6 +14,10 @@ protocol CategoryDelegate: class {
     func select(categories: [Category])
 }
 
+protocol TrailerDelegate: class {
+    func select(trailerPath: String)
+}
+
 class AddEditMovieViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -23,6 +27,7 @@ class AddEditMovieViewController: UIViewController {
     @IBOutlet weak var ratingTextField: UITextField!
     @IBOutlet weak var sinopseTextView: CustomTextView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var addTrailerButton: UIButton!
     @IBOutlet weak var categoriesCollectionView: CategoriesCollectionView!
     @IBOutlet weak var selectCategoriesButton: UIButton!
     
@@ -31,9 +36,11 @@ class AddEditMovieViewController: UIViewController {
     public var movieToEdit: Movie?
     
     private var coverImage: UIImage?
+    private var trailerPath: String?
     private var imagePicker = UIImagePickerController()
     private let timePicker = UIDatePicker()
     private let selectCategoriesSegue = "selectCategories"
+    private let selectTrailerSegue = "selectTrailer"
     private var isDarkModeEnabled: Bool!
     
     
@@ -77,6 +84,13 @@ class AddEditMovieViewController: UIViewController {
             if let selectedCategories = self.movieToEdit?.allCategories {
                 categoriesViewController.selectedCategories = selectedCategories
             }
+            return
+        }
+        
+        if let selectTrailerViewController = segue.destination as? SelectTrailerViewController {
+            selectTrailerViewController.delegate = self
+            selectTrailerViewController.movieTitle = self.titleTextField.text
+            return
         }
     }
     
@@ -120,6 +134,7 @@ class AddEditMovieViewController: UIViewController {
         newMovie.duration = duration
         newMovie.rating = rating
         newMovie.sinopse = sinopse
+        newMovie.trailerUrlPath = self.trailerPath
         
         if let categories = self.categoriesCollectionView?.categories {
             
@@ -131,9 +146,9 @@ class AddEditMovieViewController: UIViewController {
         }
         
         if movieToEdit == nil {
-            MovieServices.save(movie: newMovie)
+            MovieLocalServices.save(movie: newMovie)
         } else {
-            MovieServices.update()
+            MovieLocalServices.update()
         }
         
         self.navigationController?.popToRootViewController(animated: true)
@@ -173,11 +188,6 @@ class AddEditMovieViewController: UIViewController {
     }
     
     
-    @IBAction func selectCategories(_ sender: Any) {
-        self.performSegue(withIdentifier: self.selectCategoriesSegue, sender: nil)
-    }
-    
-    
     @objc func durationPickerDone(_ sender: Any) {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH'h' mm'min'"
@@ -190,6 +200,15 @@ class AddEditMovieViewController: UIViewController {
     }
     
     // MARK: - IBActions
+    
+    @IBAction func selectCategories(_ sender: Any) {
+        self.performSegue(withIdentifier: self.selectCategoriesSegue, sender: nil)
+    }
+    
+    @IBAction func selectTrailer(_ sender: Any) {
+        self.performSegue(withIdentifier: self.selectTrailerSegue, sender: nil)
+    }
+    
     @IBAction func addCoverButtonPressed(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -262,5 +281,13 @@ extension AddEditMovieViewController: CategoryDelegate {
     
     func select(categories: [Category]) {
         self.categoriesCollectionView.categories = categories
+    }
+}
+
+// MARK: - TrailerDelegate
+extension AddEditMovieViewController: TrailerDelegate {
+    
+    func select(trailerPath: String) {
+        self.trailerPath = trailerPath
     }
 }

@@ -34,8 +34,10 @@ class SettingsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         let isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
-        
         self.darkModeSwitch.isOn = isDarkModeEnabled
+        
+        self.autoPlaySwitch.isOn = UserDefaultsManager.isAutoPlayEnabled
+        
         self.setupViewMode(darkMode: isDarkModeEnabled)
     }
     
@@ -50,8 +52,8 @@ class SettingsViewController: UIViewController {
         self.setupViewMode(darkMode: isDarkModeEnabled)
     }
     
-    @IBAction func autoPlayValueChanged(_ sender: Any) {
-        
+    @IBAction func autoPlayValueChanged(_ sender: UISwitch) {
+        UserDefaultsManager.isAutoPlayEnabled = sender.isOn
     }
     
     

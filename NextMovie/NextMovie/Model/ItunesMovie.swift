@@ -19,7 +19,7 @@ struct ItunesMovie {
     let releaseDate: Date?
     let trackTimeMillis: Int?
     let longDescription: String?
-    let hasITunesExtras: String?
+    let hasITunesExtras: Bool?
 }
 
 extension ItunesMovie: Codable { }

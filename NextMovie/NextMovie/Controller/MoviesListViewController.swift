@@ -74,7 +74,7 @@ class MoviesListViewController: UIViewController {
     
     private func retrieveMovies() {
         
-        if let movies = MovieServices.list() {
+        if let movies = MovieLocalServices.list() {
             self.movies = movies
             self.tableView.reloadData()
         }
@@ -137,7 +137,7 @@ extension MoviesListViewController: UITableViewDataSource {
         
         if editingStyle == .delete {
             let movie = self.movies.remove(at: indexPath.row)
-            MovieServices.delete(movie: movie)
+            MovieLocalServices.delete(movie: movie)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             return
         }

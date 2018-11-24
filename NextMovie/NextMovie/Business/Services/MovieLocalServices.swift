@@ -9,23 +9,7 @@
 import UIKit.NSDataAsset
 import Foundation
 
-class MovieServices {
-    
-//    class func list() -> [Movie]? {
-//        guard let movieData = NSDataAsset(name: "movies")?.data else { return nil }
-//        
-//        let decoder = JSONDecoder()
-//        decoder.keyDecodingStrategy = .convertFromSnakeCase
-//        
-//        do {
-//            let movies = try decoder.decode([Movie].self, from: movieData)
-//            return movies
-//        } catch {
-//            print(error)
-//        }
-//        
-//        return nil
-//    }
+class MovieLocalServices {
     
     class func list() -> [Movie]? {
         

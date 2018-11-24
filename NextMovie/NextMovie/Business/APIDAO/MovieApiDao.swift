@@ -10,12 +10,12 @@ import Foundation
 
 enum Country: String {
     case br = "BR"
-    case usa = "USA"
+    case usa = "US"
 }
 
 class MovieAPIDAO {
     
-    private static let configuration: URLSessionConfiguration = {
+    private let configuration: URLSessionConfiguration = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = ["Content-Type": "application/json"]
         configuration.timeoutIntervalForResource = 10.0
@@ -23,11 +23,16 @@ class MovieAPIDAO {
         configuration.httpMaximumConnectionsPerHost = 5
         return configuration
     }()
-    private static let session = URLSession(configuration: configuration)
+    private var session: URLSession!
+    
+    init() {
+        self.session = URLSession(configuration: self.configuration)
+    }
     
     
-    static func getMovieInfo(term: String, country: Country = .usa, onSuccess: @escaping ([ItunesMovie]) -> Void,
-                             onFailure: @escaping (Error) -> Void) {
+    
+    func getMovieInfo(term: String, country: Country = .usa, onSuccess: @escaping ([ItunesMovie]) -> Void,
+                      onFailure: @escaping (Error) -> Void) {
         
         let mediaType = "movie"
         let entityType = "movie"
@@ -78,8 +83,6 @@ class MovieAPIDAO {
             default:
                 return onFailure(Errors.httpError(code: httpResponse.statusCode))
             }
-        }
-       
-        
+        }.resume()
     }
 }

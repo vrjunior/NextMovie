@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class MovieDetailsViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var categoriesCollectionView: CategoriesCollectionView!
     @IBOutlet weak var sinopseLabel: UILabel!
     @IBOutlet weak var sinopseFixedTitleLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     
     // MARK: - Properties
@@ -27,6 +29,7 @@ class MovieDetailsViewController: UIViewController {
     private let addEditMovieSegue = "addEditMovie"
     private let addReminderSegue = "addReminder"
     private var isDarkModeEnabled: Bool!
+    private var trailerPlayer: AVPlayer?
     
     
     // MARK: - Super Methods
@@ -46,6 +49,15 @@ class MovieDetailsViewController: UIViewController {
         
         self.isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
         self.setupViewMode(darkMode: self.isDarkModeEnabled)
+        
+        if UserDefaultsManager.isAutoPlayEnabled {
+            self.playTrailer()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.trailerPlayer?.pause()
     }
     
     override func setupViewMode(darkMode: Bool) {
@@ -77,8 +89,9 @@ class MovieDetailsViewController: UIViewController {
         self.titleLabel.text = movie.title
         self.durationLabel.text = movie.duration
         self.sinopseLabel.text = movie.sinopse
-        
         self.ratingLabel.text = String(movie.rating)
+        
+        self.playButton.isHidden = movie.trailerUrlPath?.isEmpty ?? true
     
         
         if let categories = movie.allCategories {
@@ -86,6 +99,25 @@ class MovieDetailsViewController: UIViewController {
         }
     }
     
+    func playTrailer() {
+        guard let videoUrlPath = self.movie.trailerUrlPath else { return }
+        let videoURL = URL(string: videoUrlPath)
+        
+        if trailerPlayer == nil {
+            self.trailerPlayer = AVPlayer(url: videoURL! as URL)
+            let playerController = AVPlayerViewController()
+            playerController.player = trailerPlayer
+            self.addChild(playerController)
+            
+            // Add your view Frame
+            playerController.view.frame = self.coverImageView.frame
+            
+            // Add sub view in your view
+            self.view.addSubview(playerController.view)
+        }
+        
+        trailerPlayer?.play()
+    }
     
     // MARK: - IBActions
     @IBAction func editButtonPressed(_ sender: Any) {
@@ -94,5 +126,9 @@ class MovieDetailsViewController: UIViewController {
     
     @IBAction func createReminderButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: self.addReminderSegue, sender: nil)
+    }
+    
+    @IBAction func playTraillerButtonPressed(_ sender: Any) {
+        self.playTrailer()
     }
 }

@@ -30,6 +30,17 @@
                                                     <constraint firstAttribute="height" constant="300" id="b6E-2z-9rl"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gS9-2B-HVv">
+                                                <rect key="frame" x="162.5" y="125" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="476-Lf-FXR"/>
+                                                    <constraint firstAttribute="width" secondItem="gS9-2B-HVv" secondAttribute="height" multiplier="1:1" id="Ayd-3D-RA5"/>
+                                                </constraints>
+                                                <state key="normal" image="PlayButtonIcon"/>
+                                                <connections>
+                                                    <action selector="playTraillerButtonPressed:" destination="vNt-Ck-fcB" eventType="touchUpInside" id="2mh-kS-cw3"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td1-Pj-GMM">
                                                 <rect key="frame" x="16" y="310" width="343" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -162,8 +173,10 @@
                                             <constraint firstItem="lHV-Rw-t9R" firstAttribute="leading" secondItem="MHQ-LI-Myf" secondAttribute="leading" id="buK-9A-QAK"/>
                                             <constraint firstItem="5E0-28-iXy" firstAttribute="trailing" secondItem="L6d-JX-FIU" secondAttribute="trailing" id="c92-xY-NDo"/>
                                             <constraint firstAttribute="trailing" secondItem="lHV-Rw-t9R" secondAttribute="trailing" id="eKm-rJ-lXj"/>
+                                            <constraint firstItem="gS9-2B-HVv" firstAttribute="centerX" secondItem="lHV-Rw-t9R" secondAttribute="centerX" id="mDr-Sz-xsw"/>
                                             <constraint firstItem="td1-Pj-GMM" firstAttribute="leading" secondItem="MHQ-LI-Myf" secondAttribute="leadingMargin" id="mNo-PC-s8C"/>
                                             <constraint firstItem="67g-fJ-fUC" firstAttribute="top" secondItem="5E0-28-iXy" secondAttribute="bottom" constant="10" id="oe3-9a-nL9"/>
+                                            <constraint firstItem="gS9-2B-HVv" firstAttribute="centerY" secondItem="lHV-Rw-t9R" secondAttribute="centerY" id="or8-uQ-IQC"/>
                                             <constraint firstItem="B43-0C-pPX" firstAttribute="leading" secondItem="td1-Pj-GMM" secondAttribute="leading" id="oua-yd-NEG"/>
                                             <constraint firstItem="5E0-28-iXy" firstAttribute="top" secondItem="L6d-JX-FIU" secondAttribute="bottom" constant="10" id="wq5-Mg-xIW"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="td1-Pj-GMM" secondAttribute="trailing" id="xSU-5m-luE"/>
@@ -210,6 +223,7 @@
                         <outlet property="categoriesCollectionView" destination="L6d-JX-FIU" id="Or3-wJ-wA0"/>
                         <outlet property="coverImageView" destination="lHV-Rw-t9R" id="tbe-js-yxY"/>
                         <outlet property="durationLabel" destination="e1j-QT-lCc" id="vjv-uv-WDM"/>
+                        <outlet property="playButton" destination="gS9-2B-HVv" id="mQI-R1-Xoi"/>
                         <outlet property="ratingLabel" destination="Ptg-6U-m5a" id="5JT-hL-unv"/>
                         <outlet property="sinopseFixedTitleLabel" destination="5E0-28-iXy" id="9IZ-DQ-kbz"/>
                         <outlet property="sinopseLabel" destination="67g-fJ-fUC" id="Q85-wB-iUM"/>
@@ -241,6 +255,7 @@
     </scenes>
     <resources>
         <image name="EditMovieIcon" width="25" height="25"/>
+        <image name="PlayButtonIcon" width="50" height="50"/>
         <image name="ReminderIcon" width="22" height="25"/>
         <image name="StarIcon" width="24" height="23"/>
         <image name="TimeIcon" width="24" height="24"/>

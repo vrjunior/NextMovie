@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQ5-hC-jrM" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="693"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="733"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8R6-qg-haV" userLabel="ImageCoverSection">
                                                 <rect key="frame" x="97" y="16" width="181" height="187"/>
@@ -72,7 +72,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7en-aG-bg3" userLabel="Form">
-                                                <rect key="frame" x="16" y="223" width="343" height="358"/>
+                                                <rect key="frame" x="16" y="223" width="343" height="398"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZp-Y2-WC2">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
@@ -155,8 +155,31 @@
                                                             <constraint firstItem="S7E-lR-n3n" firstAttribute="top" secondItem="sFg-vh-RkC" secondAttribute="top" id="pPR-aD-8cN"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjg-xz-HAe" userLabel="TrailerSection">
+                                                        <rect key="frame" x="0.0" y="184" width="343" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igF-ui-Xv2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="GRA-wH-8fP"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Adicionar trailer">
+                                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="selectTrailer:" destination="xty-g5-Do3" eventType="touchUpInside" id="uzp-nI-nCi"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="igF-ui-Xv2" firstAttribute="leading" secondItem="Vjg-xz-HAe" secondAttribute="leading" id="HLU-nN-n8j"/>
+                                                            <constraint firstItem="igF-ui-Xv2" firstAttribute="top" secondItem="Vjg-xz-HAe" secondAttribute="top" id="T83-L8-wqH"/>
+                                                            <constraint firstAttribute="bottom" secondItem="igF-ui-Xv2" secondAttribute="bottom" id="p9m-h7-kJc"/>
+                                                        </constraints>
+                                                    </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nota" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oz4-JF-zcM">
-                                                        <rect key="frame" x="0.0" y="184" width="343" height="36"/>
+                                                        <rect key="frame" x="0.0" y="224" width="343" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="2lY-8O-5di"/>
                                                         </constraints>
@@ -165,7 +188,7 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                     </textField>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DRW-Nu-zIv" customClass="CustomTextView" customModule="NextMovie" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="230" width="343" height="128"/>
+                                                        <rect key="frame" x="0.0" y="270" width="343" height="128"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" priority="750" constant="128" id="Kye-Zm-g3X"/>
@@ -192,7 +215,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37u-oL-5z2">
-                                                <rect key="frame" x="16" y="597" width="343" height="38"/>
+                                                <rect key="frame" x="16" y="637" width="343" height="38"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="05b-Iy-qoI"/>
@@ -245,6 +268,7 @@
                     <navigationItem key="navigationItem" title="Adicionar filme" id="ItW-X6-tpI"/>
                     <connections>
                         <outlet property="addButton" destination="37u-oL-5z2" id="LAx-i7-2cS"/>
+                        <outlet property="addTrailerButton" destination="igF-ui-Xv2" id="fPI-4f-ibk"/>
                         <outlet property="categoriesCollectionView" destination="muF-qW-RKp" id="lLh-vZ-Fmh"/>
                         <outlet property="coverImageView" destination="D3p-Cd-zzR" id="uq9-8v-OcR"/>
                         <outlet property="durationTextField" destination="feP-hO-dUe" id="SkN-TO-Jyc"/>
@@ -253,6 +277,7 @@
                         <outlet property="sinopseTextView" destination="DRW-Nu-zIv" id="GCw-ns-Fxw"/>
                         <outlet property="titleTextField" destination="HZp-Y2-WC2" id="ygv-Cy-aUE"/>
                         <segue destination="XBM-lv-JEX" kind="show" identifier="selectCategories" id="5YS-aU-Pyy"/>
+                        <segue destination="cGc-qA-Elm" kind="show" identifier="selectTrailer" id="ymQ-So-28c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zd-PF-8ZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,6 +291,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whF-aC-iER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000" y="-227"/>
+        </scene>
+        <!--SelectTrailerViewController-->
+        <scene sceneID="Zna-27-tjo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelectTrailerViewController" id="cGc-qA-Elm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sz-yO-WOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="-150"/>
         </scene>
     </scenes>
 </document>
