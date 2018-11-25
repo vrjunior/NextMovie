@@ -35,6 +35,8 @@
 		D25175E021AB24CD00ED693E /* MoviesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25175E221AB24CD00ED693E /* MoviesListViewController.storyboard */; };
 		D25175E821AB276B00ED693E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175E721AB276B00ED693E /* Strings.swift */; };
 		D25175E921AB2D7900ED693E /* MovieDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25175EB21AB2D7900ED693E /* MovieDetailsViewController.storyboard */; };
+		D25175F521AB2E0600ED693E /* NextMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175F421AB2E0600ED693E /* NextMovieTests.swift */; };
+		D251760321AB2E2200ED693E /* NextMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251760221AB2E2200ED693E /* NextMovieUITests.swift */; };
 		D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2B921947315008C453A /* MovieTableViewCell.swift */; };
 		D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2BB219479E7008C453A /* UIView+Shake.swift */; };
 		D25657FB21A5C187000D3DC5 /* ItunesMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */; };
@@ -75,6 +77,23 @@
 		D2F2F50F2196392B0087B899 /* ReleaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2F50E2196392B0087B899 /* ReleaseCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D25175F721AB2E0600ED693E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2642490219259BF0071DE6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2642497219259BF0071DE6F;
+			remoteInfo = NextMovie;
+		};
+		D251760521AB2E2200ED693E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2642490219259BF0071DE6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2642497219259BF0071DE6F;
+			remoteInfo = NextMovie;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		10FFF40EB9FF56F6FC9A368B /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
 		9FB735809E893A491F9CEDFB /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +131,12 @@
 		D25175E721AB276B00ED693E /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		D25175EA21AB2D7900ED693E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MovieDetailsViewController.storyboard; sourceTree = "<group>"; };
 		D25175ED21AB2D7C00ED693E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/MovieDetailsViewController.strings"; sourceTree = "<group>"; };
+		D25175F221AB2E0600ED693E /* NextMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25175F421AB2E0600ED693E /* NextMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMovieTests.swift; sourceTree = "<group>"; };
+		D25175F621AB2E0600ED693E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D251760021AB2E2100ED693E /* NextMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D251760221AB2E2200ED693E /* NextMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMovieUITests.swift; sourceTree = "<group>"; };
+		D251760421AB2E2200ED693E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D251D2B921947315008C453A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		D251D2BB219479E7008C453A /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMovie.swift; sourceTree = "<group>"; };
@@ -156,6 +181,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D25175EF21AB2E0600ED693E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25175FD21AB2E2100ED693E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2642495219259BF0071DE6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +255,24 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		D25175F321AB2E0600ED693E /* NextMovieTests */ = {
+			isa = PBXGroup;
+			children = (
+				D25175F421AB2E0600ED693E /* NextMovieTests.swift */,
+				D25175F621AB2E0600ED693E /* Info.plist */,
+			);
+			path = NextMovieTests;
+			sourceTree = "<group>";
+		};
+		D251760121AB2E2200ED693E /* NextMovieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D251760221AB2E2200ED693E /* NextMovieUITests.swift */,
+				D251760421AB2E2200ED693E /* Info.plist */,
+			);
+			path = NextMovieUITests;
+			sourceTree = "<group>";
+		};
 		D251D2B8219472FC008C453A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				D264249A219259BF0071DE6F /* NextMovie */,
+				D25175F321AB2E0600ED693E /* NextMovieTests */,
+				D251760121AB2E2200ED693E /* NextMovieUITests */,
 				D2642499219259BF0071DE6F /* Products */,
 				1EA193E24B0776F0AB13A402 /* Pods */,
 				EA3C3E435905B6C0C36DCBA9 /* Frameworks */,
@@ -270,6 +329,8 @@
 			isa = PBXGroup;
 			children = (
 				D2642498219259BF0071DE6F /* NextMovie.app */,
+				D25175F221AB2E0600ED693E /* NextMovieTests.xctest */,
+				D251760021AB2E2100ED693E /* NextMovieUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -414,6 +475,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D25175F121AB2E0600ED693E /* NextMovieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25175F921AB2E0700ED693E /* Build configuration list for PBXNativeTarget "NextMovieTests" */;
+			buildPhases = (
+				D25175EE21AB2E0600ED693E /* Sources */,
+				D25175EF21AB2E0600ED693E /* Frameworks */,
+				D25175F021AB2E0600ED693E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D25175F821AB2E0600ED693E /* PBXTargetDependency */,
+			);
+			name = NextMovieTests;
+			productName = NextMovieTests;
+			productReference = D25175F221AB2E0600ED693E /* NextMovieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D25175FF21AB2E2100ED693E /* NextMovieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D251760721AB2E2200ED693E /* Build configuration list for PBXNativeTarget "NextMovieUITests" */;
+			buildPhases = (
+				D25175FC21AB2E2100ED693E /* Sources */,
+				D25175FD21AB2E2100ED693E /* Frameworks */,
+				D25175FE21AB2E2100ED693E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D251760621AB2E2200ED693E /* PBXTargetDependency */,
+			);
+			name = NextMovieUITests;
+			productName = NextMovieUITests;
+			productReference = D251760021AB2E2100ED693E /* NextMovieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D2642497219259BF0071DE6F /* NextMovie */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26424AA219259C10071DE6F /* Build configuration list for PBXNativeTarget "NextMovie" */;
@@ -445,6 +542,14 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Valmir Junior";
 				TargetAttributes = {
+					D25175F121AB2E0600ED693E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D2642497219259BF0071DE6F;
+					};
+					D25175FF21AB2E2100ED693E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D2642497219259BF0071DE6F;
+					};
 					D2642497219259BF0071DE6F = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -465,11 +570,27 @@
 			projectRoot = "";
 			targets = (
 				D2642497219259BF0071DE6F /* NextMovie */,
+				D25175F121AB2E0600ED693E /* NextMovieTests */,
+				D25175FF21AB2E2100ED693E /* NextMovieUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D25175F021AB2E0600ED693E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25175FE21AB2E2100ED693E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2642496219259BF0071DE6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -572,6 +693,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D25175EE21AB2E0600ED693E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25175F521AB2E0600ED693E /* NextMovieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25175FC21AB2E2100ED693E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D251760321AB2E2200ED693E /* NextMovieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2642494219259BF0071DE6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,6 +767,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D25175F821AB2E0600ED693E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2642497219259BF0071DE6F /* NextMovie */;
+			targetProxy = D25175F721AB2E0600ED693E /* PBXContainerItemProxy */;
+		};
+		D251760621AB2E2200ED693E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2642497219259BF0071DE6F /* NextMovie */;
+			targetProxy = D251760521AB2E2200ED693E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D25175CE21AB21FC00ED693E /* Localizable.strings */ = {
@@ -706,6 +856,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D25175FA21AB2E0700ED693E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
+				INFOPLIST_FILE = NextMovieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vrjunior.NextMovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NextMovie.app/NextMovie";
+			};
+			name = Debug;
+		};
+		D25175FB21AB2E0700ED693E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
+				INFOPLIST_FILE = NextMovieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vrjunior.NextMovieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NextMovie.app/NextMovie";
+			};
+			name = Release;
+		};
+		D251760821AB2E2200ED693E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
+				INFOPLIST_FILE = NextMovieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vrjunior.NextMovieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NextMovie;
+			};
+			name = Debug;
+		};
+		D251760921AB2E2200ED693E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
+				INFOPLIST_FILE = NextMovieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vrjunior.NextMovieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NextMovie;
+			};
+			name = Release;
+		};
 		D26424A8219259C10071DE6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -867,6 +1095,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D25175F921AB2E0700ED693E /* Build configuration list for PBXNativeTarget "NextMovieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25175FA21AB2E0700ED693E /* Debug */,
+				D25175FB21AB2E0700ED693E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D251760721AB2E2200ED693E /* Build configuration list for PBXNativeTarget "NextMovieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D251760821AB2E2200ED693E /* Debug */,
+				D251760921AB2E2200ED693E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2642493219259BF0071DE6F /* Build configuration list for PBXProject "NextMovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
