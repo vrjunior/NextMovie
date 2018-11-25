@@ -19,6 +19,7 @@ class SelectTrailerViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var trailerNotFoundView: TrailerNotFoundView!
     
     // MARK: - Properties
     public var movieTitle: String?
@@ -108,7 +109,7 @@ extension SelectTrailerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let moviesCount = self.movies.count
-        
+        self.tableView.backgroundView = (moviesCount > 0) ? nil : self.trailerNotFoundView
         return moviesCount
     }
     

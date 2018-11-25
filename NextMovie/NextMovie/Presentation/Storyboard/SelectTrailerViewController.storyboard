@@ -69,6 +69,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="RYo-qx-Gfx" secondAttribute="trailing" constant="10" id="dRQ-JA-cYL"/>
                                                 <constraint firstItem="yuX-KY-21P" firstAttribute="leading" secondItem="ATQ-1b-XA0" secondAttribute="leading" constant="10" id="sdc-q0-Wsx"/>
                                                 <constraint firstItem="p8T-z9-RxX" firstAttribute="leading" secondItem="RYo-qx-Gfx" secondAttribute="leading" id="spB-4c-Kdz"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="p8T-z9-RxX" secondAttribute="bottom" constant="10" id="v0O-NG-WWg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,9 +100,16 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Vn3-Vq-3u6" id="tTr-r6-xj8"/>
                         <outlet property="tableView" destination="FKn-UB-RXv" id="7KV-OY-iTb"/>
+                        <outlet property="trailerNotFoundView" destination="WNj-BB-qN6" id="Jf3-TM-coC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDw-ve-Xbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="WNj-BB-qN6" customClass="TrailerNotFoundView" customModule="NextMovie" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="7Mk-uG-6Wi"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-146.40000000000001" y="135.38230884557723"/>
         </scene>

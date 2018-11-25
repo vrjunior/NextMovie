@@ -17,28 +17,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYL-r2-MDU" userLabel="ContentView">
-                    <rect key="frame" x="38.5" y="270.5" width="298.5" height="146.5"/>
+                    <rect key="frame" x="16" y="223" width="343" height="241.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MovieNotFoundIcon" translatesAutoresizingMaskIntoConstraints="NO" id="iNU-xW-gvx">
-                            <rect key="frame" x="99" y="0.0" width="100" height="100"/>
+                            <rect key="frame" x="121.5" y="0.0" width="100" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="iNU-xW-gvx" secondAttribute="height" multiplier="1:1" id="4sL-8g-NPk"/>
                                 <constraint firstAttribute="height" constant="100" id="Jx6-H2-rMd"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nenhum trailer foi encontrado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jej-Lw-HrK">
-                            <rect key="frame" x="0.0" y="120" width="298.5" height="26.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nenhum trailer foi encontrado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jej-Lw-HrK">
+                            <rect key="frame" x="0.0" y="120" width="343" height="26.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                             <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busque por algum filme utilizando a barra de busca" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zy-4J-dar">
+                            <rect key="frame" x="0.0" y="172.5" width="343" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="5zy-4J-dar" secondAttribute="bottom" constant="26" id="36v-RZ-kuW"/>
                         <constraint firstItem="jej-Lw-HrK" firstAttribute="leading" secondItem="aYL-r2-MDU" secondAttribute="leading" id="Bqs-dY-PWg"/>
                         <constraint firstAttribute="trailing" secondItem="jej-Lw-HrK" secondAttribute="trailing" id="CCC-Bi-GfY"/>
+                        <constraint firstItem="5zy-4J-dar" firstAttribute="leading" secondItem="aYL-r2-MDU" secondAttribute="leading" id="Jsf-d7-K8b"/>
+                        <constraint firstItem="5zy-4J-dar" firstAttribute="top" secondItem="jej-Lw-HrK" secondAttribute="bottom" constant="26" id="NUz-Sf-zse"/>
                         <constraint firstItem="iNU-xW-gvx" firstAttribute="top" secondItem="aYL-r2-MDU" secondAttribute="top" id="gVD-Oz-Mea"/>
-                        <constraint firstAttribute="bottom" secondItem="jej-Lw-HrK" secondAttribute="bottom" id="qbV-X5-Ubf"/>
+                        <constraint firstAttribute="trailing" secondItem="5zy-4J-dar" secondAttribute="trailing" id="pB6-wp-qq7"/>
                         <constraint firstItem="iNU-xW-gvx" firstAttribute="centerX" secondItem="aYL-r2-MDU" secondAttribute="centerX" id="ttN-HK-uIG"/>
                         <constraint firstItem="jej-Lw-HrK" firstAttribute="top" secondItem="iNU-xW-gvx" secondAttribute="bottom" constant="20" id="wfJ-u2-twe"/>
                     </constraints>
@@ -47,7 +56,8 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="aYL-r2-MDU" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="0LA-Ab-E5s"/>
-                <constraint firstItem="aYL-r2-MDU" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1hr-HR-pn7"/>
+                <constraint firstItem="aYL-r2-MDU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="14w-KN-oDO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aYL-r2-MDU" secondAttribute="trailing" constant="16" id="Q0h-dA-DDP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="138.40000000000001" y="148.87556221889056"/>
