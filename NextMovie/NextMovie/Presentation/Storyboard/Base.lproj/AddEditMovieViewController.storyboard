@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Adicionar filme-->
+        <!--Add movie-->
         <scene sceneID="bzz-6e-AXz">
             <objects>
                 <viewController id="xty-g5-Do3" customClass="AddEditMovieViewController" customModule="NextMovie" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,10 +25,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="733"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8R6-qg-haV" userLabel="ImageCoverSection">
-                                                <rect key="frame" x="97" y="16" width="181" height="187"/>
+                                                <rect key="frame" x="129.5" y="16" width="116" height="187"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D3p-Cd-zzR" customClass="BorderImageView" customModule="NextMovie" customModuleProvider="target">
-                                                        <rect key="frame" x="34.5" y="0.0" width="112" height="149"/>
+                                                        <rect key="frame" x="2" y="0.0" width="112" height="149"/>
                                                         <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="112" id="nKC-4c-amY"/>
@@ -41,14 +41,14 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZQ-56-rqq">
-                                                        <rect key="frame" x="34.5" y="0.0" width="112" height="149"/>
+                                                        <rect key="frame" x="2" y="0.0" width="112" height="149"/>
                                                         <connections>
                                                             <action selector="addCoverButtonPressed:" destination="xty-g5-Do3" eventType="touchUpInside" id="pfu-ud-5ui"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-bV-Bgp">
-                                                        <rect key="frame" x="0.0" y="157" width="181" height="30"/>
-                                                        <state key="normal" title="Adicionar imagem de capa">
+                                                        <rect key="frame" x="0.0" y="157" width="116" height="30"/>
+                                                        <state key="normal" title="Add movie cover">
                                                             <color key="titleColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -60,21 +60,21 @@
                                                 <constraints>
                                                     <constraint firstItem="D3p-Cd-zzR" firstAttribute="centerX" secondItem="8R6-qg-haV" secondAttribute="centerX" id="6QC-Qb-ez8"/>
                                                     <constraint firstItem="0hK-bV-Bgp" firstAttribute="centerX" secondItem="D3p-Cd-zzR" secondAttribute="centerX" id="Aya-Zo-VIR"/>
+                                                    <constraint firstItem="D3p-Cd-zzR" firstAttribute="leading" secondItem="8R6-qg-haV" secondAttribute="leading" constant="2" id="EoP-bN-XC1"/>
                                                     <constraint firstItem="kZQ-56-rqq" firstAttribute="leading" secondItem="D3p-Cd-zzR" secondAttribute="leading" id="GbP-Am-EnS"/>
                                                     <constraint firstItem="0hK-bV-Bgp" firstAttribute="top" secondItem="D3p-Cd-zzR" secondAttribute="bottom" constant="8" id="O7O-rS-eYZ"/>
-                                                    <constraint firstItem="0hK-bV-Bgp" firstAttribute="leading" secondItem="8R6-qg-haV" secondAttribute="leading" id="UIx-Ki-5tr"/>
                                                     <constraint firstItem="kZQ-56-rqq" firstAttribute="trailing" secondItem="D3p-Cd-zzR" secondAttribute="trailing" id="ZLa-I3-siS"/>
                                                     <constraint firstAttribute="bottom" secondItem="0hK-bV-Bgp" secondAttribute="bottom" id="dgV-TF-E74"/>
                                                     <constraint firstItem="kZQ-56-rqq" firstAttribute="top" secondItem="D3p-Cd-zzR" secondAttribute="top" id="fpI-aT-VoT"/>
-                                                    <constraint firstAttribute="trailing" secondItem="0hK-bV-Bgp" secondAttribute="trailing" id="kgL-m0-lpo"/>
                                                     <constraint firstItem="kZQ-56-rqq" firstAttribute="bottom" secondItem="D3p-Cd-zzR" secondAttribute="bottom" id="ksL-Lg-Kei"/>
                                                     <constraint firstItem="D3p-Cd-zzR" firstAttribute="top" secondItem="8R6-qg-haV" secondAttribute="top" id="vJW-39-8H9"/>
+                                                    <constraint firstItem="0hK-bV-Bgp" firstAttribute="leading" secondItem="8R6-qg-haV" secondAttribute="leading" id="wn4-2J-2zy"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7en-aG-bg3" userLabel="Form">
                                                 <rect key="frame" x="16" y="223" width="343" height="398"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZp-Y2-WC2">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZp-Y2-WC2">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="0DX-1p-6Z5"/>
@@ -83,7 +83,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duração" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feP-hO-dUe">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feP-hO-dUe">
                                                         <rect key="frame" x="0.0" y="46" width="343" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="llU-Hl-TR0"/>
@@ -96,8 +96,8 @@
                                                         <rect key="frame" x="0.0" y="92" width="343" height="82"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7E-lR-n3n">
-                                                                <rect key="frame" x="0.0" y="0.0" width="148" height="36"/>
-                                                                <state key="normal" title="Selecionar categorias">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="36"/>
+                                                                <state key="normal" title="Select categories">
                                                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -150,6 +150,7 @@
                                                             <constraint firstItem="S7E-lR-n3n" firstAttribute="leading" secondItem="sFg-vh-RkC" secondAttribute="leading" id="5fN-FS-8qB"/>
                                                             <constraint firstAttribute="bottom" secondItem="muF-qW-RKp" secondAttribute="bottom" id="E1j-6b-iRz"/>
                                                             <constraint firstItem="muF-qW-RKp" firstAttribute="top" secondItem="S7E-lR-n3n" secondAttribute="bottom" constant="4" id="Kwg-Kf-vZL"/>
+                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S7E-lR-n3n" secondAttribute="trailing" constant="20" symbolic="YES" id="dMH-3l-5oF"/>
                                                             <constraint firstItem="muF-qW-RKp" firstAttribute="leading" secondItem="sFg-vh-RkC" secondAttribute="leading" id="fls-6y-GJA"/>
                                                             <constraint firstAttribute="trailing" secondItem="muF-qW-RKp" secondAttribute="trailing" id="jTB-8A-CSr"/>
                                                             <constraint firstItem="S7E-lR-n3n" firstAttribute="top" secondItem="sFg-vh-RkC" secondAttribute="top" id="pPR-aD-8cN"/>
@@ -159,11 +160,11 @@
                                                         <rect key="frame" x="0.0" y="184" width="343" height="30"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igF-ui-Xv2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="GRA-wH-8fP"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Adicionar trailer">
+                                                                <state key="normal" title="Add trailer">
                                                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
@@ -175,10 +176,11 @@
                                                         <constraints>
                                                             <constraint firstItem="igF-ui-Xv2" firstAttribute="leading" secondItem="Vjg-xz-HAe" secondAttribute="leading" id="HLU-nN-n8j"/>
                                                             <constraint firstItem="igF-ui-Xv2" firstAttribute="top" secondItem="Vjg-xz-HAe" secondAttribute="top" id="T83-L8-wqH"/>
+                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="igF-ui-Xv2" secondAttribute="trailing" constant="20" symbolic="YES" id="WOc-Pd-P2V"/>
                                                             <constraint firstAttribute="bottom" secondItem="igF-ui-Xv2" secondAttribute="bottom" id="p9m-h7-kJc"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nota" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oz4-JF-zcM">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oz4-JF-zcM">
                                                         <rect key="frame" x="0.0" y="224" width="343" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="2lY-8O-5di"/>
@@ -196,7 +198,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Sinopse"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Synopsis"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="4"/>
                                                             </userDefinedRuntimeAttribute>
@@ -221,7 +223,7 @@
                                                     <constraint firstAttribute="height" constant="38" id="05b-Iy-qoI"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <state key="normal" title="Adicionar">
+                                                <state key="normal" title="Add">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <state key="disabled">
@@ -241,6 +243,7 @@
                                             <constraint firstItem="37u-oL-5z2" firstAttribute="trailing" secondItem="7en-aG-bg3" secondAttribute="trailing" id="AVi-om-Nyo"/>
                                             <constraint firstAttribute="trailing" secondItem="7en-aG-bg3" secondAttribute="trailing" constant="16" id="OS8-pp-dNV"/>
                                             <constraint firstAttribute="bottom" secondItem="37u-oL-5z2" secondAttribute="bottom" constant="58" id="U3n-UA-7Wy"/>
+                                            <constraint firstAttribute="bottom" secondItem="8R6-qg-haV" secondAttribute="bottom" constant="530" id="axP-8v-bb1"/>
                                             <constraint firstItem="8R6-qg-haV" firstAttribute="top" secondItem="HQ5-hC-jrM" secondAttribute="top" constant="16" id="lQv-HP-oaO"/>
                                             <constraint firstItem="7en-aG-bg3" firstAttribute="leading" secondItem="HQ5-hC-jrM" secondAttribute="leading" constant="16" id="oTU-V8-ymS"/>
                                             <constraint firstItem="7en-aG-bg3" firstAttribute="top" secondItem="8R6-qg-haV" secondAttribute="bottom" constant="20" id="th6-J2-xeG"/>
@@ -265,7 +268,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uwB-bE-syb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Adicionar filme" id="ItW-X6-tpI"/>
+                    <navigationItem key="navigationItem" title="Add movie" id="ItW-X6-tpI"/>
                     <connections>
                         <outlet property="addButton" destination="37u-oL-5z2" id="LAx-i7-2cS"/>
                         <outlet property="addTrailerButton" destination="igF-ui-Xv2" id="fPI-4f-ibk"/>

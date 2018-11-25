@@ -1,0 +1,27 @@
+
+/* Class = "UIViewController"; title = "Filmes"; ObjectID = "AE9-35-ePY"; */
+"AE9-35-ePY.title" = "Filmes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "E3H-FX-pLi"; */
+"E3H-FX-pLi.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Movies"; ObjectID = "Jnl-aQ-rHi"; */
+"Jnl-aQ-rHi.title" = "Filmes";
+
+/* Class = "UITabBarItem"; title = "Filmes"; ObjectID = "QB7-dO-doD"; */
+"QB7-dO-doD.title" = "Filmes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Rfq-UD-9qt"; */
+"Rfq-UD-9qt.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "qZJ-Bg-qtk"; */
+"qZJ-Bg-qtk.text" = "Título";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tco-hK-HmG"; */
+"tco-hK-HmG.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Movies"; ObjectID = "woK-hr-o29"; */
+"woK-hr-o29.title" = "Filmes";
+
+/* Class = "UILabel"; text = "Releases"; ObjectID = "wrX-Au-dUs"; */
+"wrX-Au-dUs.text" = "Lançamentos";

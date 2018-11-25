@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  NextMovie
+
+  Created by Valmir Junior on 25/11/18.
+  Copyright © 2018 Valmir Junior. All rights reserved.
+*/
+"SETTINGS"="Configurações";
+"DARK_MODE" = "Modo Escuro";
+"AUTO_PLAY" = "Tocar Automaticante";
+"DARK_MODE_DESCRIPTION" = "Muda o tema do app para preto";
+"AUTO_PLAY_DESCRIPTION" = "Ativa a funcionalidade de tocar o trailer automaticamente";
+"SAVE" = "Salvar";
+"ADD" = "Adicionar";
+"EDIT_MOVIE" = "Editar filme";
+"CANCEL" = "Cancelar";
+"CHOOSE_FROM_GALLERY" = "Escolher da galeria";
+"OK" = "Ok";
+"CATEGORY" = "Categoria";
+"NAME_OF_CATEGORY" = "Nome da categoria";
+"WRITE_SOME_COMENTARY" = "Escreva algum comentário";
+"REMINDER_TO_WATCH" = "Lembrete para assistir";
+"REMINDER_CREATED_AT" = "Lembrete criado em";
+"SYNOPSIS" = "Sinopse";

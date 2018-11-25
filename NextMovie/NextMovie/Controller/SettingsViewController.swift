@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        self.navigationItem.title = "Configurações"
+        self.navigationItem.title = Localization.settings
     }
     
     override func loadView() {

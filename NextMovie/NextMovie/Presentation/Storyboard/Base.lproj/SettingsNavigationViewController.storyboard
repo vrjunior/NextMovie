@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Configuração-->
+        <!--Settings-->
         <scene sceneID="tbr-lJ-gXT">
             <objects>
                 <navigationController id="Xfl-NQ-xfe" customClass="SettingsNavigationViewController" customModule="NextMovie" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Configuração" image="SettingsIcon" id="CQD-X7-c6F"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon" id="CQD-X7-c6F"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="bQL-T1-8NE">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>

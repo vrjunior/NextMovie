@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filmes-->
+        <!--Movies-->
         <scene sceneID="tA6-GO-UGD">
             <objects>
                 <navigationController id="NrP-Dv-Epd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Filmes" image="MovieIcon" id="QB7-dO-doD"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="MovieIcon" id="QB7-dO-doD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="BAu-0t-b22">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -164,7 +164,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lançamentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrX-Au-dUs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Releases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrX-Au-dUs">
                                                     <rect key="frame" x="16" y="8" width="343" height="10.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" red="0.2554112375" green="0.2355092466" blue="0.2186409533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -265,7 +265,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jq2-yf-fQk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Filmes" id="woK-hr-o29">
+                    <navigationItem key="navigationItem" title="Movies" id="woK-hr-o29">
                         <barButtonItem key="rightBarButtonItem" image="AddMovieBarButtonIcon" id="DI5-Ay-os6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -281,7 +281,7 @@
                         <segue destination="1Xf-2Y-daV" kind="show" identifier="movieDetails" id="4nv-I8-u1g"/>
                     </connections>
                 </viewController>
-                <tabBarItem title="Filmes" image="MovieIcon" id="Jnl-aQ-rHi"/>
+                <tabBarItem title="Movies" image="MovieIcon" id="Jnl-aQ-rHi"/>
                 <view contentMode="scaleToFill" id="qY2-TZ-cpU" customClass="MoviesNotFoundView" customModule="NextMovie" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="372" height="227"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

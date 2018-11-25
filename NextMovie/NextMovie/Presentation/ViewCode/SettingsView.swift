@@ -57,7 +57,7 @@ final class SettingsView: UIView {
         let label = UILabel()
         label.font = .title2
         label.textColor = .title
-        label.text = "Dark Mode"
+        label.text = Localization.darkMode
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -66,7 +66,7 @@ final class SettingsView: UIView {
         let label = UILabel()
         label.font = .subtitle
         label.textColor = .subtitle
-        label.text = "Muda o tema do app para preto"
+        label.text = Localization.darkModeDescription
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -92,7 +92,7 @@ final class SettingsView: UIView {
         let label = UILabel()
         label.font = .title2
         label.textColor = .title
-        label.text = "Auto Play"
+        label.text = Localization.autoPlay
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -101,7 +101,7 @@ final class SettingsView: UIView {
         let label = UILabel()
         label.font = .subtitle
         label.textColor = .subtitle
-        label.text = "Ativa a funcionalidade de tocar o trailer automaticamente"
+        label.text = Localization.autoPlayDescription
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

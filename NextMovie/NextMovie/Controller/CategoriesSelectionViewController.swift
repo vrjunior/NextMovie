@@ -64,8 +64,8 @@ class CategoriesSelectionViewController: UIViewController {
     
     @IBAction func addButtonPressed(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Categoria", message: nil, preferredStyle: .alert)
-        let addAction = UIAlertAction(title: "Salvar", style: .default) { (_) in
+        let alert = UIAlertController(title: Localization.category, message: nil, preferredStyle: .alert)
+        let addAction = UIAlertAction(title: Localization.save, style: .default) { (_) in
             let categoryName = alert.textFields?.first?.text
             
             let category = Category()
@@ -74,13 +74,13 @@ class CategoriesSelectionViewController: UIViewController {
             
             self.retrieveCategories()
         }
-        let cancelButton = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        let cancelButton = UIAlertAction(title: Localization.cancel, style: .cancel, handler: nil)
         
         alert.addAction(addAction)
         alert.addAction(cancelButton)
         
         alert.addTextField { (textField) in
-            textField.placeholder = "Nome da categoria"
+            textField.placeholder = Localization.nameOfCategory
         }
         
         self.present(alert, animated: true, completion: nil)

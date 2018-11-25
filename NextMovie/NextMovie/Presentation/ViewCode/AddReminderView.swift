@@ -52,7 +52,7 @@ final class AddReminderView: UIView {
     
     let descriptionTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Escreva algum comentário"
+        textField.placeholder = Localization.writeSomeComentary
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -67,7 +67,7 @@ final class AddReminderView: UIView {
     
     let createButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Adicionar", for: .normal)
+        button.setTitle(Localization.add, for: .normal)
         button.backgroundColor = .redPrimary
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -91,7 +91,7 @@ final class AddReminderView: UIView {
     // MARK: - Methods
     private func setTitle(movie: Movie) {
         let movieTitle = movie.title ?? ""
-        self.titleLabel.text = "Lembrete para assistir o filme \(movieTitle)"
+        self.titleLabel.text = "\(Localization.reminderToWatch) \(movieTitle)"
     }
 }
 
@@ -189,7 +189,7 @@ extension AddReminderView: CodeView {
     
     @objc func createReminderButtonPressed(_ sender: Any) {
         guard let title = titleLabel.text else { return }
-        var body = "Lembrete criado em \(Date().formatted)"
+        var body = "\(Localization.reminderCreatedAt) \(Date().formatted)"
         var subtitle: String?
         
         if let description = self.descriptionTextField.text, !description.isEmpty {

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Categorias-->
+        <!--Categories-->
         <scene sceneID="aes-6x-hWo">
             <objects>
                 <viewController id="PvM-bz-F49" customClass="CategoriesSelectionViewController" customModule="NextMovie" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,14 +59,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jNx-8z-Na5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Categorias" id="5p5-7A-vgk">
-                        <barButtonItem key="leftBarButtonItem" title="Cancelar" style="done" id="VvU-vq-pjd">
+                    <navigationItem key="navigationItem" title="Categories" id="5p5-7A-vgk">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" style="done" id="VvU-vq-pjd">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="PvM-bz-F49" id="rFA-07-5Vn"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem title="Feito" style="done" id="blt-7Z-WWp">
+                            <barButtonItem title="Done" style="done" id="blt-7Z-WWp">
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="PvM-bz-F49" id="NeD-RW-TgN"/>
                                 </connections>

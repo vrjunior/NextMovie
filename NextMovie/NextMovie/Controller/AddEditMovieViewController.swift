@@ -57,8 +57,8 @@ class AddEditMovieViewController: UIViewController {
         self.setupDurationPicker()
         
         if let movieToEdit = self.movieToEdit {
-            self.navigationItem.title = "Editar filme"
-            self.addButton.setTitle("Salvar", for: .normal)
+            self.navigationItem.title = Localization.editMovie
+            self.addButton.setTitle(Localization.save, for: .normal)
             self.prepare(with: movieToEdit)
         }
     }
@@ -174,9 +174,9 @@ class AddEditMovieViewController: UIViewController {
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44))
         
-        let doneButton = UIBarButtonItem(title: "Ok", style: .done, target: self,
+        let doneButton = UIBarButtonItem(title: Localization.ok, style: .done, target: self,
                                          action: #selector(durationPickerDone(_:)))
-        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self,
+        let cancelButton = UIBarButtonItem(title: Localization.cancel, style: .plain, target: self,
                                            action: #selector(durationPickerCancel(_:)))
         
         let flexibleButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -213,11 +213,11 @@ class AddEditMovieViewController: UIViewController {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         
-        actionSheet.addAction(UIAlertAction(title: "Escolher da galeria",
+        actionSheet.addAction(UIAlertAction(title: Localization.chooseFromGallery,
                                             style: .default,
                                             handler: chooseAProfilePhoto))
         
-        actionSheet.addAction(UIAlertAction(title: "Cancelar",
+        actionSheet.addAction(UIAlertAction(title: Localization.cancel,
                                             style: .cancel,
                                             handler: nil))
         

@@ -1,0 +1,12 @@
+
+/* Class = "UINavigationItem"; title = "Categories"; ObjectID = "5p5-7A-vgk"; */
+"5p5-7A-vgk.title" = "Categorias";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "UrY-5X-t3X"; */
+"UrY-5X-t3X.text" = "Título";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "VvU-vq-pjd"; */
+"VvU-vq-pjd.title" = "Cancelar";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "blt-7Z-WWp"; */
+"blt-7Z-WWp.title" = "Feito";

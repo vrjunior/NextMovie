@@ -1,0 +1,26 @@
+
+/* Class = "UIButton"; normalTitle = "Add movie cover"; ObjectID = "0hK-bV-Bgp"; */
+"0hK-bV-Bgp.normalTitle" = "Adicionar capa do filme";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "37u-oL-5z2"; */
+"37u-oL-5z2.normalTitle" = "Adicionar";
+
+/* Class = "UITextField"; placeholder = "Title"; ObjectID = "HZp-Y2-WC2"; */
+"HZp-Y2-WC2.placeholder" = "Título";
+
+/* Class = "UINavigationItem"; title = "Adicionar filme"; ObjectID = "ItW-X6-tpI"; */
+"ItW-X6-tpI.title" = "Adicionar filme";
+
+/* Class = "UITextField"; placeholder = "Rate"; ObjectID = "Oz4-JF-zcM"; */
+"Oz4-JF-zcM.placeholder" = "Nota";
+
+/* Class = "UIButton"; normalTitle = "Select categories"; ObjectID = "S7E-lR-n3n"; */
+"S7E-lR-n3n.normalTitle" = "Selecionar categorias";
+
+/* Class = "UITextField"; placeholder = "Duration"; ObjectID = "feP-hO-dUe"; */
+"feP-hO-dUe.placeholder" = "Duração";
+
+/* Class = "UIButton"; normalTitle = "Add trailer"; ObjectID = "igF-ui-Xv2"; */
+"igF-ui-Xv2.normalTitle" = "Adicionar trailer";
+
+

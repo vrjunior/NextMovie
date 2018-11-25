@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  NextMovie
+
+  Created by Valmir Junior on 25/11/18.
+  Copyright © 2018 Valmir Junior. All rights reserved.
+*/
+"SETTINGS" = "Settings";
+"DARK_MODE" = "Dark Mode";
+"AUTO_PLAY" = "Auto Play";
+"DARK_MODE_DESCRIPTION" = "Changes app theme to dark";
+"AUTO_PLAY_DESCRIPTION" = "Turn on the functionality of play automatically movie trailer";
+"SAVE" = "Save";
+"ADD" = "Add";
+"EDIT_MOVIE" = "Edit movie";
+"CANCEL" = "Cancel";
+"CHOOSE_FROM_GALLERY" = "Choose from gallery";
+"OK" = "Ok";
+"CATEGORY" = "Category";
+"NAME_OF_CATEGORY" = "Name of category";
+"WRITE_SOME_COMENTARY" = "Write some comentary";
+"REMINDER_TO_WATCH" = "Reminder to watch";
+"REMINDER_CREATED_AT" = "Reminder created at";
+"SYNOPSIS" = "Synopsis";
