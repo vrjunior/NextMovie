@@ -24,6 +24,9 @@
 		D2448A6321A9EAC6008360B0 /* MovieItunesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2448A6221A9EAC6008360B0 /* MovieItunesServices.swift */; };
 		D2448A6621A9F651008360B0 /* TrailerNotFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2448A6421A9F651008360B0 /* TrailerNotFoundView.swift */; };
 		D2448A6721A9F651008360B0 /* TrailerNotFoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2448A6521A9F651008360B0 /* TrailerNotFoundView.xib */; };
+		D25175BD21AADF5100ED693E /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175BC21AADF5100ED693E /* AppStyle.swift */; };
+		D25175C121AAE21200ED693E /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175C021AAE21200ED693E /* AddReminderView.swift */; };
+		D25175C321AAEBD400ED693E /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175C221AAEBD400ED693E /* CodeView.swift */; };
 		D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2B921947315008C453A /* MovieTableViewCell.swift */; };
 		D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2BB219479E7008C453A /* UIView+Shake.swift */; };
 		D25657FB21A5C187000D3DC5 /* ItunesMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */; };
@@ -37,7 +40,6 @@
 		D258724F219DEDA600D0EFDB /* UIImage+Resized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D258724E219DEDA600D0EFDB /* UIImage+Resized.swift */; };
 		D25DACEB21A58E9E00ADF93A /* MovieApiDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25DACEA21A58E9E00ADF93A /* MovieApiDao.swift */; };
 		D25DACED21A58EEF00ADF93A /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25DACEC21A58EEF00ADF93A /* APIRoute.swift */; };
-		D2635F19219F8B6C002B0140 /* AddReminderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2635F18219F8B6C002B0140 /* AddReminderViewController.storyboard */; };
 		D2635F1B219F906D002B0140 /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2635F1A219F906D002B0140 /* AddReminderViewController.swift */; };
 		D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264249B219259BF0071DE6F /* AppDelegate.swift */; };
 		D264249E219259BF0071DE6F /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264249D219259BF0071DE6F /* MoviesListViewController.swift */; };
@@ -88,6 +90,9 @@
 		D2448A6221A9EAC6008360B0 /* MovieItunesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItunesServices.swift; sourceTree = "<group>"; };
 		D2448A6421A9F651008360B0 /* TrailerNotFoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailerNotFoundView.swift; sourceTree = "<group>"; };
 		D2448A6521A9F651008360B0 /* TrailerNotFoundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrailerNotFoundView.xib; sourceTree = "<group>"; };
+		D25175BC21AADF5100ED693E /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		D25175C021AAE21200ED693E /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
+		D25175C221AAEBD400ED693E /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		D251D2B921947315008C453A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		D251D2BB219479E7008C453A /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMovie.swift; sourceTree = "<group>"; };
@@ -101,7 +106,6 @@
 		D258724E219DEDA600D0EFDB /* UIImage+Resized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resized.swift"; sourceTree = "<group>"; };
 		D25DACEA21A58E9E00ADF93A /* MovieApiDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiDao.swift; sourceTree = "<group>"; };
 		D25DACEC21A58EEF00ADF93A /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
-		D2635F18219F8B6C002B0140 /* AddReminderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddReminderViewController.storyboard; sourceTree = "<group>"; };
 		D2635F1A219F906D002B0140 /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
 		D2642498219259BF0071DE6F /* NextMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264249B219259BF0071DE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 		D23CCC852193206100AF8CD4 /* Mechanism */ = {
 			isa = PBXGroup;
 			children = (
+				D25175BC21AADF5100ED693E /* AppStyle.swift */,
 				D2587239219DC3FB00D0EFDB /* CoreData */,
 				D28F920F219324F3009A8B10 /* Custom */,
 				D23CCC862193207E00AF8CD4 /* Extensions */,
@@ -176,6 +181,15 @@
 				D23C698F219F9490008B23C3 /* Date+Formatted.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D25175BF21AAE20500ED693E /* ViewCode */ = {
+			isa = PBXGroup;
+			children = (
+				D25175C021AAE21200ED693E /* AddReminderView.swift */,
+				D25175C221AAEBD400ED693E /* CodeView.swift */,
+			);
+			path = ViewCode;
 			sourceTree = "<group>";
 		};
 		D251D2B8219472FC008C453A /* Cell */ = {
@@ -270,6 +284,7 @@
 		D26424AE219259EC0071DE6F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D25175BF21AAE20500ED693E /* ViewCode */,
 				D298DBBD2195C94000A28C94 /* Xib */,
 				D251D2B8219472FC008C453A /* Cell */,
 				D26424AF219259F50071DE6F /* Storyboard */,
@@ -287,7 +302,6 @@
 				D26424B021925A430071DE6F /* SettingsViewController.storyboard */,
 				D26424B621925FE00071DE6F /* AddEditMovieViewController.storyboard */,
 				D23A3FFF219F1DD600507EE9 /* CategoriesSelectionViewController.storyboard */,
-				D2635F18219F8B6C002B0140 /* AddReminderViewController.storyboard */,
 				D25657FE21A5C81B000D3DC5 /* SelectTrailerViewController.storyboard */,
 			);
 			path = Storyboard;
@@ -436,7 +450,6 @@
 				D25657FF21A5C81B000D3DC5 /* SelectTrailerViewController.storyboard in Resources */,
 				D23A400F219F6DD500507EE9 /* NoCategorySelectedView.xib in Resources */,
 				D23A4002219F23A900507EE9 /* CategoriesNotFoundView.xib in Resources */,
-				D2635F19219F8B6C002B0140 /* AddReminderViewController.storyboard in Resources */,
 				D2448A6721A9F651008360B0 /* TrailerNotFoundView.xib in Resources */,
 				D23A4000219F1DD600507EE9 /* CategoriesSelectionViewController.storyboard in Resources */,
 				D298DBC12195C9DD00A28C94 /* MoviesNotFoundView.xib in Resources */,
@@ -522,6 +535,7 @@
 				D2C65DF1219609CA00ED21C9 /* CategoriesCollectionView.swift in Sources */,
 				D23A3FFE219F1DB300507EE9 /* CategoriesSelectionViewController.swift in Sources */,
 				D2E9B507219AF6DE0032346B /* SettingsViewController.swift in Sources */,
+				D25175BD21AADF5100ED693E /* AppStyle.swift in Sources */,
 				D2B60C3621937D96007FB892 /* Movie.swift in Sources */,
 				D2635F1B219F906D002B0140 /* AddReminderViewController.swift in Sources */,
 				D23A4004219F23BE00507EE9 /* CategoriesNotFound.swift in Sources */,
@@ -529,6 +543,7 @@
 				D2448A6321A9EAC6008360B0 /* MovieItunesServices.swift in Sources */,
 				D28F921121932507009A8B10 /* BorderImageView.swift in Sources */,
 				D25DACEB21A58E9E00ADF93A /* MovieApiDao.swift in Sources */,
+				D25175C321AAEBD400ED693E /* CodeView.swift in Sources */,
 				D258724D219DECA200D0EFDB /* Errors.swift in Sources */,
 				D258724B219DEB0700D0EFDB /* MovieCoreDataDAO.swift in Sources */,
 				D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */,
@@ -555,6 +570,7 @@
 				D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */,
 				D23CCC882193216800AF8CD4 /* CustomTextView.swift in Sources */,
 				D2755495219AF8750047DF7A /* UserDefaultsManager.swift in Sources */,
+				D25175C121AAE21200ED693E /* AddReminderView.swift in Sources */,
 				D2448A6621A9F651008360B0 /* TrailerNotFoundView.swift in Sources */,
 				D2F2F50F2196392B0087B899 /* ReleaseCollectionViewCell.swift in Sources */,
 				D275549A219AFD480047DF7A /* UIViewController+DarkMode.swift in Sources */,

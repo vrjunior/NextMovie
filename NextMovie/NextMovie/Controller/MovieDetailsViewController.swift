@@ -27,7 +27,6 @@ class MovieDetailsViewController: UIViewController {
     public var movieIndex: Int!
     
     private let addEditMovieSegue = "addEditMovie"
-    private let addReminderSegue = "addReminder"
     private var isDarkModeEnabled: Bool!
     private var trailerPlayer: AVPlayer?
     
@@ -76,10 +75,6 @@ class MovieDetailsViewController: UIViewController {
             addEditMovieViewController.movieToEdit = self.movie
             return
         }
-        
-        if let addReminderViewController = segue.destination as? AddReminderViewController {
-            addReminderViewController.movie = self.movie
-        }
     }
     
     // MARK: - Methods
@@ -125,7 +120,10 @@ class MovieDetailsViewController: UIViewController {
     }
     
     @IBAction func createReminderButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: self.addReminderSegue, sender: nil)
+        
+        let addReminderViewController = AddReminderViewController()
+        addReminderViewController.movie = self.movie
+        self.navigationController?.pushViewController(addReminderViewController, animated: true)
     }
     
     @IBAction func playTraillerButtonPressed(_ sender: Any) {

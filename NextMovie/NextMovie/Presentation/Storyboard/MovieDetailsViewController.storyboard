@@ -229,20 +229,11 @@
                         <outlet property="sinopseLabel" destination="67g-fJ-fUC" id="Q85-wB-iUM"/>
                         <outlet property="titleLabel" destination="td1-Pj-GMM" id="hha-ng-WUZ"/>
                         <segue destination="Jwx-Xf-f6W" kind="show" identifier="addEditMovie" id="tHN-ML-lSs"/>
-                        <segue destination="0rn-GG-enV" kind="show" identifier="addReminder" id="b5x-ML-EKm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtB-rd-Dai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="493.60000000000002" y="-238.83058470764618"/>
-        </scene>
-        <!--AddReminderViewController-->
-        <scene sceneID="09V-UK-Oop">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AddReminderViewController" id="0rn-GG-enV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aFE-8U-ehB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1358" y="-345"/>
         </scene>
         <!--AddEditMovieViewController-->
         <scene sceneID="tjI-3z-GZw">

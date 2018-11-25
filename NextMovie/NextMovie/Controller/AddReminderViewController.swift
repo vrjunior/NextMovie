@@ -11,58 +11,40 @@ import UserNotifications
 
 class AddReminderViewController: UIViewController {
     
-    // MARK: - IBOutlets
-    @IBOutlet weak var reminderTitleLabel: UILabel!
-    @IBOutlet weak var reminderDescriptionTextField: UITextField!
-    @IBOutlet weak var reminderDatePicker: UIDatePicker!
-    @IBOutlet weak var addButton: UIButton!
-    
-    
     // MARK: - Properties
     public var movie: Movie!
+    typealias CustomView = AddReminderView
     
     // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
-        guard let movie = movie else {
+        if movie == nil {
             print("Reminder needs a movie")
             self.navigationController?.popViewController(animated: true)
             return
         }
-        
-        self.reminderDatePicker.minimumDate = Date()
-        self.prepare(with: movie)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    
-        let isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
-        self.setupViewMode(darkMode: isDarkModeEnabled)
+    override func loadView() {
+        
+        let customView = CustomView(delegate: self)
+        customView.movie = self.movie
+        view = customView
     }
     
     override func setupViewMode(darkMode: Bool) {
         
         super.setupViewMode(darkMode: darkMode)
-        self.view.backgroundColor = darkMode ? .black : .white
-        self.reminderTitleLabel.textColor = darkMode ? .white : .black
-        
-        if darkMode {
-            self.reminderDatePicker?.setValue(UIColor.white, forKey: "textColor")
-        } else {
-            self.reminderDatePicker?.setValue(UIColor.black, forKey: "textColor")
-        }
     }
     
     // MARK: - Methods
-    private func prepare(with movie: Movie) {
-        self.reminderTitleLabel.text = "Lembrete para assistir o filme \(movie.title ?? "")"
-    }
+}
+
+extension AddReminderViewController: AddReminderViewDelegate {
     
-    // MARK: - IBActions
-    @IBAction func createReminder(_ sender: Any) {
+    func createReminder(title: String, subtitle: String?, body: String, date: Date) {
         
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
@@ -75,18 +57,16 @@ class AddReminderViewController: UIViewController {
         let id = String(Date().timeIntervalSince1970)
         
         let content = UNMutableNotificationContent()
-        content.title = self.reminderTitleLabel.text ?? ""
-        
-        content.body = "Lembrete criado em \(Date().formatted)"
+        content.title = title
+        content.body = body
         content.categoryIdentifier = NotificationCategory.reminder
         
-        if let description = self.reminderDescriptionTextField.text, !description.isEmpty {
-            content.subtitle = content.body
-            content.body = description
+        if let subtitle = subtitle {
+            content.subtitle = subtitle
         }
         
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute],
-                                                             from: self.reminderDatePicker.date)
+                                                             from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
         let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
