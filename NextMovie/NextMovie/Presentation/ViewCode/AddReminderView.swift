@@ -88,7 +88,7 @@ final class AddReminderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // Mark: - Methods
+    // MARK: - Methods
     private func setTitle(movie: Movie) {
         let movieTitle = movie.title ?? ""
         self.titleLabel.text = "Lembrete para assistir o filme \(movieTitle)"

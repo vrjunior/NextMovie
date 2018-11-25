@@ -17,6 +17,7 @@ extension UIColor {
     static let bodyDarkMode = UIColor.white
     static let title = UIColor.black
     static let titleDarkMode = UIColor.white
+    static let subtitle = UIColor.darkGray
 }
 
 extension UIColor {
@@ -27,6 +28,8 @@ extension UIColor {
 
 extension UIFont {
     static let title = UIFont.boldSystemFont(ofSize: 28)
+    static let title2 = UIFont.boldSystemFont(ofSize: 20)
+    static let subtitle = UIFont.systemFont(ofSize: 16)
     static let body = UIFont.systemFont(ofSize: 15)
 }
 

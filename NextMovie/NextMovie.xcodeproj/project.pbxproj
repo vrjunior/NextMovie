@@ -27,6 +27,8 @@
 		D25175BD21AADF5100ED693E /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175BC21AADF5100ED693E /* AppStyle.swift */; };
 		D25175C121AAE21200ED693E /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175C021AAE21200ED693E /* AddReminderView.swift */; };
 		D25175C321AAEBD400ED693E /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175C221AAEBD400ED693E /* CodeView.swift */; };
+		D25175C521AB0B9600ED693E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175C421AB0B9600ED693E /* SettingsView.swift */; };
+		D25175C721AB168E00ED693E /* SettingsNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25175C621AB168E00ED693E /* SettingsNavigationViewController.swift */; };
 		D251D2BA21947315008C453A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2B921947315008C453A /* MovieTableViewCell.swift */; };
 		D251D2BC219479E7008C453A /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251D2BB219479E7008C453A /* UIView+Shake.swift */; };
 		D25657FB21A5C187000D3DC5 /* ItunesMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */; };
@@ -46,7 +48,7 @@
 		D26424A1219259BF0071DE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D264249F219259BF0071DE6F /* Main.storyboard */; };
 		D26424A3219259C10071DE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26424A2219259C10071DE6F /* Assets.xcassets */; };
 		D26424A6219259C10071DE6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424A4219259C10071DE6F /* LaunchScreen.storyboard */; };
-		D26424B121925A430071DE6F /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B021925A430071DE6F /* SettingsViewController.storyboard */; };
+		D26424B121925A430071DE6F /* SettingsNavigationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B021925A430071DE6F /* SettingsNavigationViewController.storyboard */; };
 		D26424B321925A6E0071DE6F /* MovieDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B221925A6E0071DE6F /* MovieDetailsViewController.storyboard */; };
 		D26424B521925A8B0071DE6F /* MoviesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */; };
 		D26424B721925FE00071DE6F /* AddEditMovieViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26424B621925FE00071DE6F /* AddEditMovieViewController.storyboard */; };
@@ -93,6 +95,8 @@
 		D25175BC21AADF5100ED693E /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		D25175C021AAE21200ED693E /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
 		D25175C221AAEBD400ED693E /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		D25175C421AB0B9600ED693E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D25175C621AB168E00ED693E /* SettingsNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationViewController.swift; sourceTree = "<group>"; };
 		D251D2B921947315008C453A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		D251D2BB219479E7008C453A /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		D25657FA21A5C187000D3DC5 /* ItunesMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMovie.swift; sourceTree = "<group>"; };
@@ -114,7 +118,7 @@
 		D26424A2219259C10071DE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D26424A5219259C10071DE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D26424A7219259C10071DE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D26424B021925A430071DE6F /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		D26424B021925A430071DE6F /* SettingsNavigationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsNavigationViewController.storyboard; sourceTree = "<group>"; };
 		D26424B221925A6E0071DE6F /* MovieDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetailsViewController.storyboard; sourceTree = "<group>"; };
 		D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoviesListViewController.storyboard; sourceTree = "<group>"; };
 		D26424B621925FE00071DE6F /* AddEditMovieViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddEditMovieViewController.storyboard; sourceTree = "<group>"; };
@@ -186,8 +190,9 @@
 		D25175BF21AAE20500ED693E /* ViewCode */ = {
 			isa = PBXGroup;
 			children = (
-				D25175C021AAE21200ED693E /* AddReminderView.swift */,
 				D25175C221AAEBD400ED693E /* CodeView.swift */,
+				D25175C021AAE21200ED693E /* AddReminderView.swift */,
+				D25175C421AB0B9600ED693E /* SettingsView.swift */,
 			);
 			path = ViewCode;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				D2755499219AFD480047DF7A /* UIViewController+DarkMode.swift */,
 				D2635F1A219F906D002B0140 /* AddReminderViewController.swift */,
 				D2448A6021A9E6AA008360B0 /* SelectTrailerViewController.swift */,
+				D25175C621AB168E00ED693E /* SettingsNavigationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,7 +305,7 @@
 				D264249F219259BF0071DE6F /* Main.storyboard */,
 				D26424B421925A8B0071DE6F /* MoviesListViewController.storyboard */,
 				D26424B221925A6E0071DE6F /* MovieDetailsViewController.storyboard */,
-				D26424B021925A430071DE6F /* SettingsViewController.storyboard */,
+				D26424B021925A430071DE6F /* SettingsNavigationViewController.storyboard */,
 				D26424B621925FE00071DE6F /* AddEditMovieViewController.storyboard */,
 				D23A3FFF219F1DD600507EE9 /* CategoriesSelectionViewController.storyboard */,
 				D25657FE21A5C81B000D3DC5 /* SelectTrailerViewController.storyboard */,
@@ -445,7 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26424B121925A430071DE6F /* SettingsViewController.storyboard in Resources */,
+				D26424B121925A430071DE6F /* SettingsNavigationViewController.storyboard in Resources */,
 				D26424A6219259C10071DE6F /* LaunchScreen.storyboard in Resources */,
 				D25657FF21A5C81B000D3DC5 /* SelectTrailerViewController.storyboard in Resources */,
 				D23A400F219F6DD500507EE9 /* NoCategorySelectedView.xib in Resources */,
@@ -538,6 +544,7 @@
 				D25175BD21AADF5100ED693E /* AppStyle.swift in Sources */,
 				D2B60C3621937D96007FB892 /* Movie.swift in Sources */,
 				D2635F1B219F906D002B0140 /* AddReminderViewController.swift in Sources */,
+				D25175C521AB0B9600ED693E /* SettingsView.swift in Sources */,
 				D23A4004219F23BE00507EE9 /* CategoriesNotFound.swift in Sources */,
 				D298DBC32195D4DF00A28C94 /* MovieDetailsViewController.swift in Sources */,
 				D2448A6321A9EAC6008360B0 /* MovieItunesServices.swift in Sources */,
@@ -552,6 +559,7 @@
 				D264249E219259BF0071DE6F /* MoviesListViewController.swift in Sources */,
 				D2448A6121A9E6AA008360B0 /* SelectTrailerViewController.swift in Sources */,
 				D264249C219259BF0071DE6F /* AppDelegate.swift in Sources */,
+				D25175C721AB168E00ED693E /* SettingsNavigationViewController.swift in Sources */,
 				D23A4006219F25AF00507EE9 /* CategoryCoreDataDAO.swift in Sources */,
 				D298DBBF2195C9CB00A28C94 /* MoviesNotFoundView.swift in Sources */,
 				D258724F219DEDA600D0EFDB /* UIImage+Resized.swift in Sources */,

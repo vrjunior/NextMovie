@@ -10,61 +10,41 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    // MARK: - IBOutlets
-    @IBOutlet weak var darkModeTitleFixedLabel: UILabel!
-    @IBOutlet weak var darkModeDescriptionFixedLabel: UILabel!
-    @IBOutlet weak var darkModeSwitch: UISwitch!
-    @IBOutlet weak var autoPlayTitleFixedLabel: UILabel!
-    @IBOutlet weak var autoPlayDescriptionFixedLabel: UILabel!
-    @IBOutlet weak var autoPlaySwitch: UISwitch!
-    
-    
+
     // MARK: - Properties
-    
+    typealias CustomView = SettingsView
     
     // MARK: - Super Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.navigationItem.title = "Configurações"
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let isDarkModeEnabled = UserDefaultsManager.isDarkModeEnabled
-        self.darkModeSwitch.isOn = isDarkModeEnabled
-        
-        self.autoPlaySwitch.isOn = UserDefaultsManager.isAutoPlayEnabled
-        
-        self.setupViewMode(darkMode: isDarkModeEnabled)
+    override func loadView() {
+        view = CustomView(delegate: self)
     }
+    
     
     // MARK: - Methods
+}
+
+extension SettingsViewController: SettingsViewDelegate {
     
-    
-    // MARK: - IBActions
-    @IBAction func darkModeValueChanged(_ sender: UISwitch) {
-        let isDarkModeEnabled = sender.isOn
-        UserDefaultsManager.isDarkModeEnabled = isDarkModeEnabled
-        
-        self.setupViewMode(darkMode: isDarkModeEnabled)
+    func darkModeChanged(isEnabled: Bool) {
+        UserDefaultsManager.isDarkModeEnabled = isEnabled
     }
     
-    @IBAction func autoPlayValueChanged(_ sender: UISwitch) {
-        UserDefaultsManager.isAutoPlayEnabled = sender.isOn
+    func autoPlayChanged(isEnabled: Bool) {
+        UserDefaultsManager.isAutoPlayEnabled = isEnabled
     }
     
-    
-    override func setupViewMode(darkMode: Bool) {
-        super.setupViewMode(darkMode: darkMode)
-        
-        self.view.backgroundColor = darkMode ? .black : .white
-        self.darkModeTitleFixedLabel.textColor = darkMode ? .white : .black
-        self.autoPlayTitleFixedLabel.textColor = darkMode ? .white : .black
-        self.darkModeDescriptionFixedLabel.textColor = darkMode ? .lightGray : .darkGray
-        self.autoPlayDescriptionFixedLabel.textColor = darkMode ? .lightGray : .darkGray
+    func isDarkModeEnabled() -> Bool {
+        return UserDefaultsManager.isDarkModeEnabled
     }
     
+    func isAutoLayoutEnabled() -> Bool {
+        return UserDefaultsManager.isAutoPlayEnabled
+    }
 }

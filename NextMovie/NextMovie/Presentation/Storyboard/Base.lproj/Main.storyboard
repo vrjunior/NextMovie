@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="1045" y="-224"/>
         </scene>
-        <!--SettingsViewController-->
+        <!--SettingsNavigationViewController-->
         <scene sceneID="p43-wF-1hM">
             <objects>
-                <viewControllerPlaceholder storyboardName="SettingsViewController" id="oXe-n2-nav" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SettingsNavigationViewController" id="oXe-n2-nav" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Configuração" image="SettingsIcon" id="RrR-Cy-ANc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUi-yI-cqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
